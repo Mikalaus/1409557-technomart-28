@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
+        <span class="logo">Техномарт</span>
+
+        <form class="search-field" action="index.html" method="get" id="search-field">
+          <input type="search" name="search-field" placeholder="Поиск:" class = "search">
+        </form>
+
+        <div class="goods">
+          <span class="marked">Закладки: </span>
+          <span class="chosen-products">Корзина: </span> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+          <a href="#" class="confirm">Оформить заказ</a>
+        </div>
+      </div>
+
+      <div class="UI-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+        <p>
+          Интернет-магазин строительных материалов и инструментов для ремонта
+        </p>
+
+        <a href="#" class = "phone">+7 (812) 555-05-55</a> <!--подпись реализую через псевдоэлемент ::after display: block;-->
+
+        <div class="user-profile">
+          <form class="user-features" action="index.html" method="post"> <!--Добавить иконки и подумать как span вставить-->
+            <input type="image" src="" name="user-profile">
+            <input type="image" src="" name="user-quit">
+          </form>
+          <span>Равшан Джамшутович</span> <!--Не уверен насчет тэга-->
+          <a href="#">Мои заказы</a>
+          <!--Не знаю как точку буду делать: через CSS или svg ставить?-->
+          <a href="#">Личный кабинет</a>
+        </div>
+
+      </div>
+
+      <nav class="header-nav">
+        <ul>
+          <li> <a>Главная</a> </li>
+          <li> <a>Компания</a> </li>
+          <li> <a>Каталог</a> </li>
+          <li> <a>Новости</a> </li>
+          <li> <a>Спецпредложения</a> </li>
+          <li> <a>Доставка</a> </li>
+          <li> <a>Контакты</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <nav class="inner-page-nav">
+
+        <form class="home-page-link" action="index.html" method="post">
+          <input type="image" name="home-link" src="img/icon-home.png" alt="home-page">
+        </form>
+        <a href="#">Каталог</a>
+        <a href="#">Инструмент</a> <!--Стрелочки через псевдоэлементы скорее всего буду делать-->
+        <a href="#">Перфораторы</a>
+
+      </nav>
+
+      <div class="catalog">
+        <span class="main-catalog-title">
+          <h1>Перфораторы</h1>
+        </span>
+
+        <section class="filter-side">
+          <span>Фильтр:</span>
+          <form class="filter-catalog" action="index.html" method="post">
+            <fieldset class="price-filter">
+              <legend>Цена:</legend>
+              <div class="back-div">
+                <input type="range" name="price-range" id="price-range">
+              </div>
+              <div class="price-value-min">0</div>
+              <span><img src="img/sidebar.png" alt="sidebar"></span>
+              <div class="price-value-max">30000</div>
+            </fieldset>
+            <fieldset class="company-filter">
+              <legend>Производители:</legend>
+              <label><input type="checkbox" name="company-name"> BOSCH</label>
+              <label><input type="checkbox" name="company-name"> ИНТЕРСКОЛ</label>
+              <label><input type="checkbox" name="company-name"> MAKITA</label>
+              <label><input type="checkbox" name="company-name"> DEWALT</label>
+              <label><input type="checkbox" name="company-name"> HITACHI</label>
+            </fieldset>
+            <fieldset class="charge-type-filter">
+              <legend>Питание:</legend>
+              <label><input type="radio" name="charge-type"> аккумкляторные</label>
+              <label><input type="radio" name="charge-type"> сетевые</label>
+            </fieldset>
+            <button type="button" name="search-button" value="ПОКАЗАТЬ"></button>
+          </form>
+        </section>
+
+        <section class="goods-side">
+          <div class="small-filter">
+            <!-- Не понял как работает этот фильтр: что за что отвечает? -->
+          </div>
+
+          <div class="good-cards"> <!-- А здесь не списком реализовать лучше? -->
+            <article class="goods good-1"> <!-- что с классами? и нужны ли они если списком делать? -->
+              <img src="" alt="BOSCH BFG 6000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+            </article>
+
+            <article class="goods good-2">
+              <img src="" alt="BOSCH BFG 6000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+            </article>
+
+            <article class="goods good-3">
+              <img src="" alt="BOSCH BFG 6000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+            </article>
+
+            <article class="goods good-4">
+              <img src="" alt="BOSCH BFG 3000">
+              <h4>Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+            </article>
+
+            <article class="goods good-5">
+              <img src="" alt="BOSCH BFG 6000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+            </article>
+
+            <article class="goods good-6">
+              <img src="" alt="BOSCH BFG 2000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price"></span>
+              <span class="new-price">12500 Р.</span>
+            </article>
+
+            <article class="goods good-7">
+              <img src="" alt="BOSCH BFG 3000">
+              <h4>Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+            </article>
+
+            <article class="goods good-8">
+              <img src="" alt="BOSCH BFG 3000">
+              <h4>Перфоратор BOSCH BFG 3000</h4>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+            </article>
+
+            <article class="goods good-9">
+              <img src="" alt="BOSCH BFG 2000">
+              <h4>Перфоратор BOSCH BFG 6000</h4>
+              <span class="old-price"></span>
+              <span class="new-price">12500 Р.</span>
+            </article>
+          </div>
+          <div class="page-search">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <button type="button" name="page-change-button" value="СЛЕДУЮЩАЯ"></button>
+          </div>
+        </section>
+      </div>
+
+      <section class="about-good">
+        <h2>Пара слов о перфораторах</h2>
+        <article class="good-description">
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+
+      <div class="top-part">
+
+        <span class="logo">Техномарт</span>
+
+        <span class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</span>
+
+        <nav class="footer-nav-1">
+          <ul>
+            <li> <a href="#">Компания</a> </li>
+            <li> <a href="#">Новости</a> </li>
+            <li> <a href="#">Каталог</a> </li>
+            <li> <a href="#">Доставка</a> </li>
+            <li> <a href="#">Контакты</a> </li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-2">
+          <ul>
+            <li> <a href="#">Материалы</a> </li>
+            <li> <a href="#">Техника</a> </li>
+            <li> <a href="#">Инструмент</a> </li>
+            <li> <a href="#">Спецпредложения</a> </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bottom-part">
+        <span class="copyright">© 2010–2019 Компания «Техномарт» Все права защищены</span>
+
+        <div class="social-media">
+          <a href="#" class="vk"></a>
+          <a href="#" class="facebook"></a>
+          <a href="#" class="instagram"></a>
+        </div>
+
+        <span>Обратная связь: <a href="#"> mail@htmlacademy.ru</a></span>
+
+        <span>Разработано — <a href="#">htmlacademy.ru</a></span>
+      </div>
+
+    </footer>
+
+  </body>
