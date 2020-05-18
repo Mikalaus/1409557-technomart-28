@@ -1,9 +1,8 @@
 body{
-    margin: 0;
-    padding: 0 auto;
-    font-family: 'Cuprum', 'PT Sans', sans-serif;
-
-  }
+  margin: 0;
+  padding: 0 auto;
+  font-family: 'Cuprum', 'PT Sans', sans-serif;
+}
 
 .top-header{
   background-color: #293449;
