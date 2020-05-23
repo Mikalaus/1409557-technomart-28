@@ -1,38 +1,5 @@
 body{
   margin: 0;
   padding: 0 auto;
-  font-family: 'Cuprum', 'PT Sans', sans-serif;
-}
-
-.top-header{
-  background-color: #293449;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  max-width: 940px;
-  height: 42px;
-}
-
-.top-header .logo{
-  display: block;
-  color: #FFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-transform: uppercase;
-  font-size: 18px;
-  width: 220px;
-  height: 30px;
-  text-align: center;
-  padding-top: 12px;
-  margin-left: 130px;
-  background-color: #EE3643;
-}
-
-.top-header .logo::after{
-  content: "";
-  position: absolute;
-  display: block;
-  top: 42px;
-  width: 220px;
-  height: 5px;
-  background-color: #B52933;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
