@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
@@ -10,54 +11,48 @@
   <body>
     <header>
       <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
-        <a href="index.html"><span class="logo">Техномарт</span></a>
+          <a class="logo" href="index.html">Техномарт</a>
 
-        <form class="search-field" action="index.html" method="get" id="search-field">
-          <input type="search" name="search-field" placeholder="Поиск:" class="search">
-        </form>
+          <form class="search-field" action="index.html" method="get" id="search-field">
+            <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
+          </form>
 
-        <div class="goods">
-          <a class="marked" href="#">Закладки: </a>
-          <a class="chosen-products" href="#">Корзина: </a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
-          <a href="#" class="confirm">Оформить заказ</a>
-        </div>
-      </div>
-
-      <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
-        <p>
-          Интернет-магазин строительных материалов и инструментов для ремонта
-        </p>
-        <p>
-          <a href="#" class = "phone">+7 (812) 555-05-55</a>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </p>
-
-
-        <div class="user-profile">
-          <div class="user-features">
-            <a class="user-profile">profile</a>
-            <span>Равшан Джамшутович</span>
-            <a class="user-quit">quit</a>
+          <div class="goods">
+            <a class="marked" href="#">Закладки: 0</a>
+            <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+            <a href="#" class="confirm">Оформить заказ</a>
           </div>
-          <a href="#">Мои заказы</a>
-          <!--Не знаю как точку буду делать: через CSS или svg ставить?-->
-          <a href="#">Личный кабинет</a>
+        </div>
+        <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+          <div class="description">
+            <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
+          </div>
+
+          <div class="contacts">
+            <a href="#" class="phone">+7 (812) 555-05-55</a>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+
+          <div class="user-reg">
+            <a href="#" class="log-in">Войти</a>
+            <a href="#" class="reg">Регистрация</a>
+          </div>
+
         </div>
 
-      </div>
-
-      <nav class="header-nav">
-        <ul>
-          <li> <a href="index.html">Главная</a> </li>
-          <li> <a href="#">Компания</a> </li>
-          <li> <a href="catalog.html">Каталог</a> </li>
-          <li> <a href="#">Новости</a> </li>
-          <li> <a href="#">Спецпредложения</a> </li>
-          <li> <a href="#">Доставка</a> </li>
-          <li> <a href="#">Контакты</a> </li>
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            <li> <a href="index.html">Главная</a> </li>
+            <li> <a href="#">Компания</a> </li>
+            <li> <a href="catalog.html">Каталог</a> </li>
+            <li> <a href="#">Новости</a> </li>
+            <li> <a href="#">Спецпредложения</a> </li>
+            <li> <a href="#">Доставка</a> </li>
+            <li> <a href="#">Контакты</a> </li>
+          </ul>
+        </nav>
     </header>
+    
     <main>
 
       <nav class="inner-page-nav">
@@ -94,7 +89,7 @@
             </fieldset>
             <fieldset class="charge-type-filter">
               <legend>Питание:</legend>
-              <label><input type="radio" name="charge-type"> аккумкляторные</label>
+              <label><input type="radio" name="charge-type"> аккумуляторные</label>
               <label><input type="radio" name="charge-type"> сетевые</label>
             </fieldset>
             <button type="submit" name="search-button" value="показать"></button>
@@ -216,23 +211,23 @@
     <footer>
 
       <div class="top-footer">
+        <div class="top-left-footer-part">
+          <a class="logo" href="index.html">Техномарт</a>
 
-        <span class="logo">Техномарт</span>
+          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+          +7 (812) 555-05-55</p>
+        </div>
 
-        <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</span>
-
-        <nav class="footer-nav-primary">
-          <ul>
+        <nav class="footer-nav">
+          <ul class="first-nav">
             <li> <a href="index.html">Компания</a> </li>
             <li> <a href="#">Новости</a> </li>
             <li> <a href="catalog.html">Каталог</a> </li>
             <li> <a href="#">Доставка</a> </li>
             <li> <a href="#">Контакты</a> </li>
           </ul>
-        </nav>
 
-        <nav class="footer-nav-secondary">
-          <ul>
+          <ul class="second-nav">
             <li> <a href="#">Материалы</a> </li>
             <li> <a href="#">Техника</a> </li>
             <li> <a href="#">Инструмент</a> </li>
@@ -243,17 +238,20 @@
 
       <div class="bottom-footer">
 
-        <span class="copyright">© 2010–2019 Компания «Техномарт» Все права защищены</span>
+        <div class="copyright">© 2010–2019 Компания «Техномарт»<br>
+          Все права защищены</div>
 
         <div class="social-media">
-          <a href="#" class="vk"> <img src="img/icon-vk.svg" alt="вк"> </a>
-          <a href="#" class="facebook"> <img src="img/icon-fb.svg" alt="фейсбук"> </a>
-          <a href="#" class="instagram"> <img src="img/icon-insta.svg" alt="инстаграм"> </a>
+          <a href="#" class="vk"></a>
+          <a href="#" class="facebook"></a>
+          <a href="#" class="instagram"></a>
         </div>
 
-        <p>Обратная связь: <a href="#"> mail@htmlacademy.ru</a></p>
+        <div class="feedback-contancts">
+          <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
 
-        <p>Разработано — <a href="#">htmlacademy.ru</a></p>
+          <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/">htmlacademy.ru</a></div>
+        </div>
       </div>
 
     </footer>

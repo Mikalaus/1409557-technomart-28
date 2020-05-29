@@ -1,5 +1,917 @@
+:root{
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #293449;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --white: #FFF;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --special-lightgrey: #EAEAEA;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --mistake: #BA2732;
+}
+
 body{
+  min-width: 940px;
   margin: 0;
-  padding: 0 auto;
+  padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
+}
+
+img{
+  max-width: 100%
+}
+
+a{
+  text-decoration: none
+}
+
+.hidden{
+  display: none;
+}
+
+header{
+  background-color: var(--basic-background);
+}
+
+.top-header{
+  background-color: var(--basic-grey);
+  display: flex;
+  align-items: center;
+  max-height: 42px;
+}
+
+.top-header a,
+.header-nav a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.top-header .logo{ /* логотип */
+  position: relative;
+  font-family: "Cuprum";
+  line-height: 18px;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  min-width: 220px;
+  margin-right: 42px;
+}
+
+.top-header .logo::after{ /* декоративная часть логотипа */
+  position: absolute;
+  display: block;
+  width: 100%;
+  content: "";
+  left: 0;
+  height: 5px;
+  top: 42px;
+  background-color: #B52933;
+}
+
+.top-header .search-field input{ /* поиск в header */
+  background-color: transparent;
+  border: none;
+  margin-right: 115px;
+}
+
+.search-field input::-webkit-input-placeholder{
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Cuprum";
+}
+
+.top-header .goods{ /* закладки, корзина, оформить заказ */
+  font-family: "Cuprum";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.top-header .goods .marked{
+  margin-right: 73px;
+}
+
+.top-header .goods .chosen-products{
+  margin-right: 26px;
+}
+
+.top-header .confirm{
+  background-color: var(--basic-green);
+  padding: 11px 0;
+  padding-left: 19px;
+  padding-right: 16px;
+}
+
+.ui-header{
+  margin-left: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ui-header .description{ /* описание */
+  font-family: "Cuprum";
+  max-width: 197px;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+  margin-right: 93px;
+  margin-top: 27.5px;
+}
+
+.ui-header .contacts{ /* телефон и адрес */
+  text-align: center;
+  min-width: 270px;
+  margin-top: 42px;
+  margin-right: 72px;
+}
+
+.ui-header .phone{
+  display: block;
+  border: 3px solid var(--white);
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: #F3F7F9;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  margin-bottom: -10px;
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.ui-header .contacts p{
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425C;
+}
+
+.header-nav{ /* навигация */
+  background-color: var(--basic-grey);
+  text-align: center;
+  max-width: 940px;
+}
+
+.header-nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav li{
+  padding-top: 16px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Cuprum";
+}
+
+.header-nav li:first-child{
+  margin-left: 22px;
+}
+
+.header-nav li:last-child{
+  margin-right: 47px;
+}
+
+.ui-header .user-reg a{ /* войти и регистрация */
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: "Cuprum";
+  font-size: 21px;
+  line-height: 21px;
+  margin-top: 31px;
+}
+
+.ui-header .user-reg .log-in{
+  margin-right: 5px;
+  padding: 12px 0;
+  padding-left: 45px;
+  padding-right: 27px;
+  max-width: 49px;
+}
+
+.ui-header .user-reg .reg{
+  padding: 12px 24px;
+  max-width: 102px;
+}
+
+main .main-catalog{
+  margin-top: 59px;
+  width: 940px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 123px 123px auto;
+}
+
+main .main-catalog .catalog-item{ /* грид раскладка */
+  position: relative;
+}
+
+main .main-catalog .catalog-item{
+  color: white;
+}
+
+main .main-catalog .catalog-item h3{
+  display: block;
+  color: white;
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-left: 23px;
+  margin-bottom: 14px;
+}
+
+main .main-catalog .catalog-item a{
+  display: block;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  width: 135px;
+  max-height: 38px;
+  text-align: center;
+  padding: 10px 0;
+  margin-left: 23px;
+}
+
+main .main-catalog .material{
+  background: var(--special-yellow) url("../img/bucket.png") 213px no-repeat;
+}
+
+main .main-catalog .delivery{
+  background: var(--special-yellow) url("../img/car-delivery.png") 191px no-repeat;
+  grid-column: 3/4;
+}
+
+main .main-catalog .material a,
+main .main-catalog .delivery a{
+  background-color: var(--special-yellowlight);
+}
+
+main .main-catalog .tools{
+  background: var(--special-blue) url("../img/screwdriver.png") 194px no-repeat;
+}
+
+main .main-catalog .tools a{
+  background-color: #76D0EB;
+}
+
+main .main-catalog .devices{
+  background: var(--special-lilac) url("../img/traktor.png") 191px no-repeat;
+}
+
+main .main-catalog .devices a{
+  background-color: #E7B2E4;
+}
+
+main .main-catalog .discount{
+  background: var(--special-greenlight) url("../img/shop.png") 196px no-repeat;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+main .main-catalog .discount a{
+  background-color: #B0E3B1;
+}
+
+main .main-catalog .slider-box{
+  overflow: hidden;
+  margin-top: -30px;
+  grid-column: 1/3;
+  grid-row: 2/4;
+  padding-bottom: 20px;
+}
+
+main .main-catalog .screwdriver{
+  background-color: var(--basic-grey);
+  background: url("../img/slider-screwdriver.jpg") no-repeat;
+}
+
+main .main-catalog .perforator{
+  background-color: var(--basic-grey);
+  background: url("../img/slider-screw.jpg") no-repeat;
+}
+
+main .main-catalog .slider .slider-header h2{
+  color: white;
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 23px;
+  margin-left: 24px;
+  margin-bottom: 8px;
+}
+
+main .main-catalog .slider .slider-header h4{
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 24px;
+  margin-top: 0px;
+}
+
+main .main-catalog .slider .arrow{
+  width: 22px;
+  height: 20px;
+  margin-top: 7px;
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+main .main-catalog .slider .back{
+  background: url("../img/icon-left.svg") no-repeat;
+  margin-right: 506px;
+}
+
+main .main-catalog .slider .forward{
+  background: url("../img/icon-right.svg") no-repeat;
+}
+
+main .main-catalog .slider .catalog-button{
+  margin-top: 36px;
+  width: 192px;
+  text-align: center;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+main .main-catalog .slider .radio-slide{
+  position: absolute;
+  top: 215px;
+  left: 290px;
+}
+
+.custom-radio{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/* для элемента label связанного с .custom-radio */
+.custom-radio+label{
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before{
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: #fff;
+}
+
+.custom-radio.checked+label::before{
+background-color: red;
+}
+
+main .popular-good .block-header{ /* популярные товары */
+  position: relative;
+  background-color: #F9F5F0;
+  display: inline-block;
+  width: 940px;
+  margin-top: 59px;
+}
+
+main .popular-good .block-header h2{
+  display: inline-block;
+  font-family: 'Cuprum';
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425C;
+  margin-left: 28px;
+}
+
+main .popular-good .block-header a{ /* все популярные товары */
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-left: 28px;                /* как выровнить по центральной линии? */
+  width: 192px;
+  text-align: center;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  color: #fff;
+  margin-left: 442px;
+}
+
+main .popular-good .goods-catalog{ /* товар */
+  display: flex;
+  max-width: 940px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+main .popular-good .goods .item-hover {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 170px;
+    padding: 44px 41px;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #fff;
+  }
+
+main .goods{
+  width: 220px;
+  max-height: 318px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EAEAEA;
+}
+
+main .goods h4{
+  width: 185px;
+  text-align: center;
+  font-family: 'PT Sans';
+  font-size: 18px;
+  line-height: 20px;
+}
+
+main .goods .old-price{
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: #A9A9A9;
+  text-decoration: line-through;
+}
+
+main .goods .new-price{
+  font-family: 'PT Sans';
+  width: 141px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  background: url('../img/buy-button.png') no-repeat;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+}
+
+main .popular-developers .block-header{ /* популярные производители */
+  position: relative;
+  background-color: #F9F5F0;
+  display: inline-block;
+  width: 940px;
+  margin-top: 70px;
+}
+
+main .popular-developers .block-header h2{
+  display: inline-block;
+  font-family: 'Cuprum';
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425C;
+  margin-left: 28px;
+}
+
+main .popular-developers .block-header a{ /* все популярные производители */
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-left: 28px;                /* как выровнить по центральной линии? */
+  width: 192px;
+  text-align: center;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  color: #fff;
+  margin-left: 334px;
+}
+
+main .popular-developers .developers{ /* товар */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 940px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+main .popular-developers .developers .dev{
+  margin-bottom: 20px;
+  width: 220px;
+  height: 145px;
+  max-height: 318px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EAEAEA;
+}
+
+main .services{
+  background-color: var(--basic-background);
+  padding-top: 64px;
+}
+
+main .services h2{
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+main .services>p{
+  width: 396px;
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+main .services .slider{ /* второй слайлер */
+  display: flex;
+  position: relative;
+  width: 940px;
+  height: 329px;
+  margin-top: 21px;
+}
+
+main .services .slider .menu{
+  position: relative;
+  font-family: 'Cuprum';
+  padding-top: 49px;
+  padding-bottom: 45px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  min-width: 240px;
+}
+
+main .services .slider .menu::after{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../img/shadow.png") no-repeat center right;
+  content: "";
+  width: 10px;
+  height: 279px;
+}
+
+.service-item{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.service-item+label{
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  width: 218px;
+  height: 61px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  color: white;
+  max-height: 61px;
+  background-color: #32425C;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  padding-left: 22px;
+}
+
+.service-item:checked+label{
+  color: #32425C;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: white;
+}
+
+main .services .slider .slider-items{
+  margin-left: 80px;
+  margin-top: 18px;
+  max-width: 619px;
+}
+
+main .services .slider .slider-items article{
+  min-width: 619px;
+  height: 283px;
+}
+
+main .services .slider .slider-items article h2{
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425C;
+}
+
+main .services .slider .slider-items article p{
+  margin-top: 30px;
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+main .services .slider .slider-items .deliverry{
+  background: url("../img/delivery.png") no-repeat right bottom;
+}
+
+main .services .slider .slider-items .guarantee{
+  background: url("../img/guarantee.png") no-repeat right bottom;
+}
+
+main .services .slider .slider-items .credit{
+  background: url("../img/credit.png") no-repeat right bottom;
+}
+
+main .about-us{
+  display: flex;
+  margin: 70px 0;
+}
+
+main .about-us .company{
+  margin-right: 161px;
+}
+
+main .about-us h2{
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+main .about-us p{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+main .about-us .company .company-description{
+  width: 478px;
+  margin-bottom: 0px;
+}
+
+main .about-us .company .delivery-companies{
+  margin-top: -15px;
+  list-style: none;
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+main .about-us .company .delivery-companies li{
+  background: url("../img/li-decoration.png") no-repeat left 14px;
+  margin-left: -40px;
+  padding-left: 37px;
+  margin-bottom: 12px;
+}
+
+main .about-us .company a{
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  width: 220px;
+  text-align: center;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  color: #fff;
+}
+
+main .about-us .contacts p{
+  width: 180px;
+  margin-bottom: 32px;
+}
+
+main .about-us .map{
+  margin-bottom: 25px;
+}
+
+main .about-us .write-us{
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  width: 300px;
+  text-align: center;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+footer{
+  background-color: #32425C;
+}
+
+footer .top-footer{
+  display: flex;
+  max-width: 940px;
+}
+
+footer .top-footer .top-left-footer-part{
+  min-width: 324px;
+  margin-right: 0;
+}
+
+footer .top-footer .top-left-footer-part .logo{ /* логотип */
+  position: relative;
+  display: block;
+  font-family: "Cuprum";
+  line-height: 25px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+  padding: 20px 41px;
+  max-width: 108px;
+  margin-bottom: 22px;
+}
+
+footer .top-footer .top-left-footer-part .logo::after{ /* декоративная часть логотипа */
+  position: absolute;
+  display: block;
+  width: 100%;
+  content: "";
+  left: 0;
+  height: 5px;
+  top: 64px;
+  background-color: #B52933;
+}
+
+footer .top-footer .top-left-footer-part .address{
+  color: white;
+  font-family: 'Cuprum';
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 54px;
+}
+
+footer .top-footer .footer-nav{
+  display: block;
+  margin-top: 17px;
+  margin-left: 69px;
+}
+
+footer .top-footer .footer-nav ul{
+  list-style: none;
+  display: flex;
+}
+
+footer .top-footer .footer-nav .first-nav li a{
+  color: white;
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-right: 58px;
+  margin-bottom: 34px;
+}
+
+footer .top-footer .footer-nav .second-nav li a{
+  color: #FFD180;
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-right: 59px;
+}
+
+footer .top-footer .footer-nav .second-nav{
+  margin-left: 24px;
+}
+
+footer .bottom-footer{
+  padding-top: 34px;
+  padding-bottom: 29px;
+  background-color: var(--basic-grey);
+  display: flex;
+}
+
+footer .bottom-footer .copyright{
+  color: white;
+  font-family: 'Cuprum';
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 191px;
+}
+
+footer .bottom-footer .social-media{
+  max-width: 134px;
+  margin-right: 118px;
+}
+
+footer .bottom-footer .social-media a{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+footer .bottom-footer .social-media a:first-child{
+  background: #212A3A url("../img/icon-vk.svg") no-repeat center;
+}
+
+footer .bottom-footer .social-media a:nth-child(2){
+  margin-left: -4px;
+  margin-right: -3px;
+  background: #212A3A url("../img/icon-fb.svg") no-repeat center;
+}
+
+footer .bottom-footer .social-media a:last-child{
+  background: #212A3A url("../img/icon-insta.svg") no-repeat center;
+}
+
+footer .bottom-footer .feedback-contacts{
+  max-width: 286px;
+  height: 37px;
+}
+
+footer .bottom-footer .feedback{
+  display: inline-block;
+  color: white;
+  font-family: 'Cuprum';
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 51px;
+}
+
+footer .bottom-footer .feedback a{
+  color: #FFD180;;
+}
+
+footer .bottom-footer .designed-by{
+  display: inline-block;
+  color: white;
+  font-family: 'Cuprum';
+  font-size: 16px;
+  line-height: 18px;
+}
+
+footer .bottom-footer .designed-by a{
+  color: #FFD180;;
 }
