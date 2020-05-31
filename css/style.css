@@ -17,10 +17,11 @@
 }
 
 body{
-  min-width: 940px;
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
+  height: 100%;
 }
 
 img{
@@ -37,13 +38,34 @@ a{
 
 header{
   background-color: var(--basic-background);
+  padding-bottom: 60px;
+
+}
+
+header .center-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-index{
+  display: flex;
+  justify-content: center;
+}
+
+footer .center-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-header{
+  position: relative;
   background-color: var(--basic-grey);
   display: flex;
   align-items: center;
   max-height: 42px;
+  overflow: visible;
 }
 
 .top-header a,
@@ -82,6 +104,10 @@ header{
   background-color: transparent;
   border: none;
   margin-right: 115px;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Cuprum";
 }
 
 .search-field input::-webkit-input-placeholder{
@@ -102,7 +128,7 @@ header{
 }
 
 .top-header .goods .chosen-products{
-  margin-right: 26px;
+  margin-right: 28px;
 }
 
 .top-header .confirm{
@@ -160,9 +186,11 @@ header{
 }
 
 .header-nav{ /* навигация */
-  background-color: var(--basic-grey);
+  background-color: #32425C;
   text-align: center;
-  max-width: 940px;
+  min-width: 940px;
+  border-bottom: 5px solid #293449;
+  margin-top: 20px;
 }
 
 .header-nav ul{
@@ -174,8 +202,6 @@ header{
 }
 
 .header-nav li{
-  padding-top: 16px;
-  padding-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum";
@@ -216,9 +242,9 @@ main .main-catalog{
   margin-top: 59px;
   width: 940px;
   display: grid;
-  grid-gap: 20px;
+  gap: 20px;
   grid-template-columns: repeat(3, 300px);
-  grid-template-rows: 123px 123px auto;
+  grid-template-rows: 123px 123px 123px;
 }
 
 main .main-catalog .catalog-item{ /* грид раскладка */
@@ -445,7 +471,7 @@ main .popular-good .goods-catalog{ /* товар */
   margin-top: 20px;
 }
 
-main .popular-good .goods .item-hover {
+main .popular-good .goods .item-hover{
     position: absolute;
     z-index: -1;
     top: 0;
@@ -460,7 +486,7 @@ main .popular-good .goods .item-hover {
     font-size: 14px;
     line-height: 18px;
     background-color: #fff;
-  }
+}
 
 main .goods{
   width: 220px;
@@ -542,6 +568,7 @@ main .popular-developers .developers{ /* товар */
   max-width: 940px;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 70px;
 }
 
 main .popular-developers .developers .dev{
@@ -558,7 +585,7 @@ main .popular-developers .developers .dev{
 
 main .services{
   background-color: var(--basic-background);
-  padding-top: 64px;
+  padding-top: 70px;
 }
 
 main .services h2{
@@ -642,6 +669,7 @@ main .services .slider .slider-items{
   margin-left: 80px;
   margin-top: 18px;
   max-width: 619px;
+  margin-bottom: 4px;
 }
 
 main .services .slider .slider-items article{
@@ -846,6 +874,7 @@ footer .top-footer .footer-nav .second-nav{
 }
 
 footer .bottom-footer{
+  position: relative;
   padding-top: 34px;
   padding-bottom: 29px;
   background-color: var(--basic-grey);
@@ -914,4 +943,77 @@ footer .bottom-footer .designed-by{
 
 footer .bottom-footer .designed-by a{
   color: #FFD180;;
+}
+
+.bottom-footer::before{
+  position: absolute;
+  display: block;
+  content: "";
+  left: -240px;
+  top: 0;
+  width: 240px;
+  background-color: var(--basic-grey);
+  height: 112px;
+}
+
+.bottom-footer::after{
+  position: absolute;
+  display: block;
+  content: "";
+  right: -240px;
+  top: 0;
+  width: 240px;
+  background-color: var(--basic-grey);
+  height: 112px;
+}
+
+.top-header::before{
+  position: absolute;
+  display: block;
+  content: "";
+  left: -247px;
+  top: 0;
+  width: 247px;
+  background-color: var(--basic-grey);
+  height: 42px;
+}
+
+
+.top-header::after{
+  position: absolute;
+  display: block;
+  content: "";
+  right: -247px;
+  top: 0;
+  width: 247px;
+  background-color: var(--basic-grey);
+  height: 42px;
+}
+
+.services::before{
+  position: absolute;
+  display: block;
+  left: -240px;
+  top: 0;
+  content: "";
+  width: 240px;
+  background-color: var(--basic-background);
+  height: 548px;
+}
+
+.services::after{
+  position: absolute;
+  display: block;
+  right: -240px;
+  top: 0;
+  content: "";
+  width: 240px;
+  background-color: var(--basic-background);
+  height: 548px;
+}
+
+.services-wrapper{
+  position: relative;
+  width: 100%;
+  max-height: 522px;
 }

@@ -10,20 +10,21 @@
   </head>
   <body>
     <header>
-      <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
-          <a class="logo" href="index.html">Техномарт</a>
+      <div class="center-wrapper">
+        <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
+            <a class="logo" href="index.html">Техномарт</a>
 
-          <form class="search-field" action="index.html" method="get" id="search-field">
-            <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
-          </form>
+            <form class="search-field" action="index.html" method="get" id="search-field">
+              <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
+            </form>
 
-          <div class="goods">
-            <a class="marked" href="#">Закладки: 0</a>
-            <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
-            <a href="#" class="confirm">Оформить заказ</a>
+            <div class="goods">
+              <a class="marked" href="#">Закладки: 0</a>
+              <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+              <a href="#" class="confirm">Оформить заказ</a>
+            </div>
           </div>
-        </div>
-        <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+          <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
           <div class="description">
             <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
           </div>
@@ -51,8 +52,8 @@
             <li> <a href="#">Контакты</a> </li>
           </ul>
         </nav>
+      </div>
     </header>
-    
     <main>
 
       <nav class="inner-page-nav">
@@ -209,51 +210,51 @@
     </main>
 
     <footer>
+      <div class="center-wrapper">
+        <div class="top-footer">
+          <div class="top-left-footer-part">
+            <a class="logo" href="index.html">Техномарт</a>
 
-      <div class="top-footer">
-        <div class="top-left-footer-part">
-          <a class="logo" href="index.html">Техномарт</a>
+            <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+            +7 (812) 555-05-55</p>
+          </div>
 
-          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-          +7 (812) 555-05-55</p>
+          <nav class="footer-nav">
+            <ul class="first-nav">
+              <li> <a href="index.html">Компания</a> </li>
+              <li> <a href="#">Новости</a> </li>
+              <li> <a href="catalog.html">Каталог</a> </li>
+              <li> <a href="#">Доставка</a> </li>
+              <li> <a href="#">Контакты</a> </li>
+            </ul>
+
+            <ul class="second-nav">
+              <li> <a href="#">Материалы</a> </li>
+              <li> <a href="#">Техника</a> </li>
+              <li> <a href="#">Инструмент</a> </li>
+              <li> <a href="#">Спецпредложения</a> </li>
+            </ul>
+          </nav>
         </div>
 
-        <nav class="footer-nav">
-          <ul class="first-nav">
-            <li> <a href="index.html">Компания</a> </li>
-            <li> <a href="#">Новости</a> </li>
-            <li> <a href="catalog.html">Каталог</a> </li>
-            <li> <a href="#">Доставка</a> </li>
-            <li> <a href="#">Контакты</a> </li>
-          </ul>
+        <div class="bottom-footer">
 
-          <ul class="second-nav">
-            <li> <a href="#">Материалы</a> </li>
-            <li> <a href="#">Техника</a> </li>
-            <li> <a href="#">Инструмент</a> </li>
-            <li> <a href="#">Спецпредложения</a> </li>
-          </ul>
-        </nav>
+          <div class="copyright">© 2010–2019 Компания «Техномарт»<br>
+            Все права защищены</div>
+
+          <div class="social-media">
+            <a href="#" class="vk"></a>
+            <a href="#" class="facebook"></a>
+            <a href="#" class="instagram"></a>
+          </div>
+
+          <div class="feedback-contancts">
+            <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
+
+            <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/">htmlacademy.ru</a></div>
+          </div>
+        </div>
       </div>
-
-      <div class="bottom-footer">
-
-        <div class="copyright">© 2010–2019 Компания «Техномарт»<br>
-          Все права защищены</div>
-
-        <div class="social-media">
-          <a href="#" class="vk"></a>
-          <a href="#" class="facebook"></a>
-          <a href="#" class="instagram"></a>
-        </div>
-
-        <div class="feedback-contancts">
-          <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
-
-          <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/">htmlacademy.ru</a></div>
-        </div>
-      </div>
-
     </footer>
     <section class="write-us-popup hidden">
       <form class="write-us" action="index.html" method="get">
