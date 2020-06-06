@@ -122,18 +122,50 @@ main{
   padding-bottom: 12px;
   text-align: center;
   min-width: 220px;
-  margin-right: 42px;
   border-bottom: 5px solid #B52933;
+}
+
+.top-header .logo:active{
+  background-color: #BA2732;
+  border-color: #8D1E26;
+}
+
+.top-header .search-wrapper{
+  width: 270px;
+  height: 42px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.top-header .search-wrapper:focus-within{ /* ВОТ ТУТ КАКОЙ СЕЛЕКТОР ПРОПИСАТЬ? */
+  background-color: white;
 }
 
 .top-header .search-field input{ /* поиск в header */
   background-color: transparent;
   border: none;
-  margin-right: 115px;
   color: white;
+  width: 225px;
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum";
+  outline: none;
+}
+
+.top-header .search-field p::before{
+  display: inline-block;
+  content: "";
+  width: 17px;
+  height: 17px;
+  margin-bottom: -2px;
+  margin-right: 6px;
+  margin-left: 17px;
+  background: url("../img/icon-search.svg")
+}
+
+.top-header .search-field:hover > p::before{
+  background: url("../img/icon-search-hover.svg")
 }
 
 .search-field input::-webkit-input-placeholder{
@@ -143,25 +175,93 @@ main{
   font-family: "Cuprum";
 }
 
-.top-header .goods{ /* закладки, корзина, оформить заказ */
+.top-header .search-wrapper:focus-within > .search-field p::before{
+  background: url("../img/icon-search-active.svg")
+}
+
+.top-header .search-wrapper:focus-within > .search-field input::-webkit-input-placeholder,
+.top-header .search-wrapper:focus-within > .search-field input{
+  color: black;
+}
+
+.top-header .goods{ /* закладки, корзина, оформить заказ */ /* BUG: Появляется box-shadow при наведении на элементы */
   font-family: "Cuprum";
   font-size: 18px;
   line-height: 24px;
+  display: flex;
+  align-items: center;
 }
 
-.top-header .goods .marked{
-  padding-right: 73px;
+.top-header .goods div{
+  width: 150px;
+  height: 42px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 9px;
 }
 
-.top-header .goods .chosen-products{
-  padding-right: 28px;
+.top-header .goods .marked::before{
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 16px;
+  margin-bottom: -2px;
+  margin-right: 7px;
+  background: url("../img/icon-bookmark.svg")
 }
 
-.top-header .confirm{
+.top-header .goods .marked-hover-wrapper:hover > .marked::before{
+  background: url("../img/icon-bookmark-hover.svg")
+}
+
+.top-header .goods .marked-hover-wrapper:active{
+  background-color: #161D29;
+}
+
+.top-header .goods .marked-hover-wrapper:active > .marked{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.top-header .goods .marked-hover-wrapper:active > .marked::before{
+  opacity: 0.3;
+}
+
+.top-header .goods .chosen-products::before{
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+  margin-right: 6px;
+  background: url("../img/icon-cart.svg")
+}
+
+.top-header .goods .chosen-products-hover-wrapper:hover > .chosen-products::before{
+  background: url("../img/icon-cart-hover.svg")
+}
+
+.top-header .goods .chosen-products-hover-wrapper:active{
+  background-color: #161D29;
+}
+
+.top-header .goods .chosen-products-hover-wrapper:active > .chosen-products{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.top-header .goods .chosen-products-hover-wrapper:active > .chosen-products::before{
+  opacity: 0.3;
+}
+
+.top-header .confirm-wrapper{
   background-color: var(--basic-green);
-  padding: 11px 0;
-  padding-left: 19px;
-  padding-right: 16px;
+}
+
+.top-header .confirm-wrapper:hover{
+  background-color: var(--success);
+}
+
+.top-header .confirm:active{
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .ui-header{
@@ -185,7 +285,7 @@ main{
   text-align: center;
   min-width: 270px;
   margin-top: 42px;
-  margin-right: 71px;
+  margin-right: 64px;
 }
 
 .ui-header .phone{
@@ -214,30 +314,47 @@ main{
 .header-nav{ /* навигация */
   background-color: #32425C;
   text-align: center;
-  min-width: 940px;
+  width: 940px;
   border-bottom: 5px solid #293449;
   margin-top: 20px;
 }
 
-.header-nav ul{
+.header-nav{
   display: flex;
-  list-style: none;
   align-items: center;
+  box-sizing: border-box;
   justify-content: space-between;
+  height: 60px;
 }
 
-.header-nav li a{
+.header-nav a{
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum";
+  width: 100%;
+  height: auto;
 }
 
-.header-nav li:first-child{
-  margin-left: 22px;
+.header-nav div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-grow: 1;
+  box-sizing: border-box;
 }
 
-.header-nav li:last-child{
-  margin-right: 47px;
+.header-nav div:hover{
+  background-color: #293449;
+}
+
+.header-nav div:first-child{
+  padding-left: 22px;
+}
+
+.header-nav div:last-child{
+  padding-right: 12px;
 }
 
 .ui-header .user-reg a{ /* войти и регистрация */
@@ -279,7 +396,7 @@ main{
 }
 
 .ui-header .user-reg .log-in-wrapper:hover > .log-in::before{
-  background: url("../img/icon-login-hover.png") no-repeat center;
+  background: url("../img/icon-login-hover.svg") no-repeat center;
 }
 
 .ui-header .user-reg a:active{
@@ -296,7 +413,7 @@ main .main-catalog{
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 300px);
-  grid-template-rows: 123px 123px auto;
+  grid-template-rows: 123px 123px 123px;
 }
 
 main .main-catalog .catalog-item{ /* грид раскладка */
@@ -339,25 +456,12 @@ main .main-catalog .delivery{
   grid-column: 3/4;
 }
 
-main .main-catalog .material a,
-main .main-catalog .delivery a{
-  background-color: var(--special-yellowlight);
-}
-
 main .main-catalog .tools{
   background: var(--special-blue) url("../img/screwdriver.png") 194px no-repeat;
 }
 
-main .main-catalog .tools a{
-  background-color: #76D0EB;
-}
-
 main .main-catalog .devices{
   background: var(--special-lilac) url("../img/traktor.png") 191px no-repeat;
-}
-
-main .main-catalog .devices a{
-  background-color: #E7B2E4;
 }
 
 main .main-catalog .discount{
@@ -366,14 +470,39 @@ main .main-catalog .discount{
   grid-row: 2/3;
 }
 
+main .main-catalog .material a,
+main .main-catalog .delivery a,
+main .main-catalog .tools a,
+main .main-catalog .devices a,
 main .main-catalog .discount a{
-  background-color: #B0E3B1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+main .main-catalog .material a:hover,
+main .main-catalog .delivery a:hover,
+main .main-catalog .tools a:hover,
+main .main-catalog .devices a:hover,
+main .main-catalog .discount a:hover{
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+main .main-catalog .material a:active,
+main .main-catalog .delivery a:active,
+main .main-catalog .tools a:active,
+main .main-catalog .devices a:active,
+main .main-catalog .discount a:active{
+  background-color: rgba(169, 169, 169, 0.3);
 }
 
 main .main-catalog .slider-box{
-  min-height: 266px;
   grid-column: 1/3;
   grid-row: 2/4;
+  margin-top: -30px;
+}
+
+main .main-catalog .slider-box .spacer{
+  content: "";
+  height: 30px;
 }
 
 main .main-catalog .screwdriver{
@@ -480,13 +609,14 @@ background-color: red;
 main .popular-good .block-header{ /* популярные товары */
   position: relative;
   background-color: #F9F5F0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 940px;
   margin-top: 59px;
 }
 
 main .popular-good .block-header h2{
-  display: inline-block;
+  display: block;
   font-family: 'Cuprum';
   font-size: 30px;
   line-height: 30px;
@@ -496,10 +626,11 @@ main .popular-good .block-header h2{
 }
 
 main .popular-good .block-header a{ /* все популярные товары */
-  display: inline-block;
+  display: block;
+  box-sizing: border-box;
+  max-height: 38px;
   padding-top: 11px;
   padding-bottom: 9px;
-  margin-left: 28px;                /* как выровнить по центральной линии? */
   width: 192px;
   text-align: center;
   font-family: "Cuprum";
@@ -548,7 +679,7 @@ main .popular-good .goods-catalog{ /* товар */
   left: 30px;
   width: 15px;
   height: 15px;
-  background: url("../img/buy-button-cart.png") no-repeat center;
+  background: url("../img/buy-button-cart.svg") no-repeat center;
 }
 
 .goods .item-hover .choose-button{
@@ -692,7 +823,8 @@ main .goods .new-price::after{
 main .popular-developers .block-header{ /* популярные производители */
   position: relative;
   background-color: #F9F5F0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 940px;
   margin-top: 70px;
 }
@@ -711,7 +843,7 @@ main .popular-developers .block-header a{ /* все популярные про�
   display: inline-block;
   padding-top: 11px;
   padding-bottom: 9px;
-  margin-left: 28px;                /* как выровнить по центральной линии? */
+  max-height: 38px;
   width: 192px;
   text-align: center;
   font-family: "Cuprum";
@@ -1097,7 +1229,7 @@ footer .bottom-footer .social-media a:active{
 }
 
 footer .bottom-footer .feedback-contacts{
-  max-width: 289px;
+  width: auto;
   height: 37px;
 }
 
@@ -1175,11 +1307,11 @@ header .user-profile .user{
 }
 
 header .user-profile .user:hover > .profile-wrapper > .profile{
-  background-image: url("../img/icon-user-hover.png")
+  background-image: url("../img/icon-user-hover.svg")
 }
 
 header .user-profile .user:hover > .quit-wrapper > .quit{
-  background-image: url("../img/icon-logout-hover.png")
+  background-image: url("../img/icon-logout-hover.svg")
 }
 
 header .user-profile .user:active > .profile-wrapper > .profile{
@@ -1601,18 +1733,18 @@ main .catalog .separator-wrapper .goods-side .small-filter .filter-item:hover{
 main .catalog .separator-wrapper .goods-side .small-filter .up-icon{
   width: 11px;
   height: 10px;
-  background: url("../img/icon-up-dir.png");
   margin-right: 21px;
+  background: url("../img/icon-up-dir.svg");
 }
 
 main .catalog .separator-wrapper .goods-side .small-filter .down-icon{
   width: 11px;
   height: 10px;
-  background: url("../img/icon-down-dir.png");
+  background: url("../img/icon-down-dir.svg");
 }
 
 .catalog .separator-wrapper .goods-side .small-filter .down-icon:hover{
-  background: url("../img/icon-down-dir-hover.png")
+  background: url("../img/icon-down-dir-hover.svg")
 }
 
 .catalog .separator-wrapper .goods-side .small-filter .up-icon:hover{

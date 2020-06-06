@@ -15,14 +15,16 @@
           <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
             <a class="logo" href="index.html">Техномарт</a>
 
-            <form class="search-field" action="index.html" method="get" id="search-field">
-              <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
-            </form>
+            <div class="search-wrapper">
+              <form class="search-field" action="index.html" method="get" id="search-field">
+                <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
+              </form>
+            </div>
 
             <div class="goods">
-              <a class="marked" href="#">Закладки: 0</a>
-              <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
-              <a href="#" class="confirm">Оформить заказ</a>
+              <div class="marked-hover-wrapper"><a class="marked" href="#">Закладки: 0</a> </div>
+              <div class="chosen-products-hover-wrapper"><a class="chosen-products" href="#">Корзина: 0</a> </div> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+              <div class="confirm-wrapper"><a href="#" class="confirm">Оформить заказ</a> </div>
             </div>
           </div>
         </div>
@@ -45,14 +47,13 @@
         </div>
 
         <nav class="header-nav">
-          <ul>
-            <li> <a href="index.html">Главная</a> </li>
-            <li> <a href="#">Компания</a> </li>
-            <li> <a href="catalog.html">Каталог</a> </li>
-            <li> <a href="#">Новости</a> </li>
-            <li> <a href="#">Спецпредложения</a> </li>
-            <li> <a href="#">Доставка</a> </li>
-            <li> <a href="#">Контакты</a> </li>
+          <div><a href="index.html">Главная</a> </div>
+          <div><a href="#">Компания</a> </div>
+          <div><a href="catalog.html">Каталог</a> </div>
+          <div><a href="#">Новости</a> </div>
+          <div><a href="#">Спецпредложения</a> </div>
+          <div><a href="#">Доставка</a> </div>
+          <div><a href="#">Контакты</a> </div>
           </ul>
         </nav>
       </div>
@@ -102,6 +103,9 @@
                   <input class="custom-radio-two custom-radio" name="page" type="radio" id="first-page-two" value="red">
                   <label for="first-page-two"></label>
                 </div>
+                <div class="spacer">
+
+                </div>
               </article>
 
               <article class="catalog-item slider perforator">
@@ -117,6 +121,9 @@
                   <label for="second-page-one"></label>
                   <input class=" custom-radio checked" name="color" type="radio" id="second-page-two" value="red">
                   <label for="second-page-two"></label>
+                </div>
+                <div class="spacer">
+
                 </div>
               </article>
             </div>
