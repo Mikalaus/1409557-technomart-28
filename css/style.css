@@ -303,6 +303,16 @@ main{
   text-decoration: none;
 }
 
+.ui-header .phone::before{
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../img/icon-phone.svg");
+  margin-bottom: -2px;
+  margin-right: 16px;
+}
+
 .ui-header .contacts p{
   font-family: 'Cuprum';
   font-weight: normal;
@@ -802,7 +812,7 @@ main .goods .new-price::after{
   display: none;
 }
 
-.goods:hover{
+main .goods:hover{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -1174,12 +1184,20 @@ footer .top-footer .footer-nav .second-nav li:hover > a{
   border-bottom: solid 1px #FFD180;
 }
 
-footer .top-footer .footer-nav .second-nav{
-  margin-left: 24px;
-}
-
 footer .top-footer .footer-nav li:active > a{
   opacity: 0.5;
+}
+
+footer .top-footer .footer-nav .first-nav li:active > a{
+  border-bottom: none;
+}
+
+footer .top-footer .footer-nav .second-nav li:active > a{
+  border-bottom: none;
+}
+
+footer .top-footer .footer-nav .second-nav{
+  margin-left: 24px;
 }
 
 footer .bottom-footer{
@@ -1196,6 +1214,7 @@ footer .bottom-footer .copyright{
   font-size: 16px;
   line-height: 18px;
   margin-right: 191px;
+  padding-left: 20px;
 }
 
 footer .bottom-footer .social-media{
