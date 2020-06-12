@@ -21,42 +21,42 @@
               </form>
             </div>
 
-            <div class="goods">
-              <div class="marked-hover-wrapper"><a class="marked" href="#">Закладки: 0</a> </div>
-              <div class="chosen-products-hover-wrapper"><a class="chosen-products" href="#">Корзина: 0</a> </div> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
-              <div class="confirm-wrapper"><a href="#" class="confirm">Оформить заказ</a> </div>
+            <div class="header-goods">
+              <a class="marked" href="#">Закладки: 0</a>
+              <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+              <a href="#" class="confirm">Оформить заказ</a>
             </div>
           </div>
         </div>
         <div class="ui-header-wrapper">
           <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
-          <div class="description">
-            <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
-          </div>
+            <div class="description">
+              <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
+            </div>
 
-          <div class="contacts">
-            <a href="#" class="phone">+7 (812) 555-05-55</a>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </div>
+            <div class="contacts">
+              <a href="#" class="phone">+7 (812) 555-05-55</a>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </div>
 
-          <div class="user-reg">
-            <span class="log-in-wrapper"><a href="#" class="log-in">Войти</a></span>
-            <a href="#" class="reg">Регистрация</a>
-          </div>
+            <div class="user-reg">
+              <a href="#" class="log-in">Войти</a>
+              <a href="#" class="reg">Регистрация</a>
+            </div>
 
-        </div>
+          </div>
 
         <nav class="header-nav">
-          <div><a href="index.html">Главная</a> </div>
-          <div><a href="#">Компания</a> </div>
-          <div><a href="catalog.html">Каталог</a> </div>
-          <div><a href="#">Новости</a> </div>
-          <div><a href="#">Спецпредложения</a> </div>
-          <div><a href="#">Доставка</a> </div>
-          <div><a href="#">Контакты</a> </div>
-          </ul>
+          <a href="index.html">Главная</a>
+          <a href="#">Компания</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="#">Новости</a>
+          <a href="#">Спецпредложения</a>
+          <a href="#">Доставка</a>
+          <a href="#">Контакты</a>
         </nav>
       </div>
+    </div>
     </header>
 
     <main>
@@ -103,9 +103,6 @@
                   <input class="custom-radio-two custom-radio" name="page" type="radio" id="first-page-two" value="red">
                   <label for="first-page-two"></label>
                 </div>
-                <div class="spacer">
-
-                </div>
               </article>
 
               <article class="catalog-item slider perforator">
@@ -121,9 +118,6 @@
                   <label for="second-page-one"></label>
                   <input class=" custom-radio checked" name="color" type="radio" id="second-page-two" value="red">
                   <label for="second-page-two"></label>
-                </div>
-                <div class="spacer">
-
                 </div>
               </article>
             </div>
@@ -154,8 +148,6 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <a class="hidden buy-button" href="#">Купить</a>
-                <a class="hidden choose-button"href="#">В закладки</a>
                 <div class="good-img-container"></div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 3000</b></h4>
@@ -169,8 +161,6 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <a class="hidden buy-button" href="#">Купить</a>
-                <a class="hidden choose-button"href="#">В закладки</a>
                 <div class="good-img-container"></div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
@@ -184,8 +174,6 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <a class="hidden buy-button" href="#">Купить</a>
-                <a class="hidden choose-button"href="#">В закладки</a>
                 <div class="good-img-container"></div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 2000</b></h4>
@@ -201,7 +189,7 @@
 
             <div class="block-header">
               <h2>Популярные производители:</h2>
-              <a id="red-button" href="catalog.html"> Все производители </a>
+              <a class="popular-developers-link" id="red-button" href="catalog.html"> Все производители </a>
             </div>
 
             <div class="developers">
