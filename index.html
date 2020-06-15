@@ -96,7 +96,7 @@
                 </div>
                 <a class="back arrow"></a>
                 <a class="forward arrow forward-second"></a>
-                <a class="catalog-button" id="red-button" href="catalog.html">открыть каталог</a>
+                <a class="catalog-button red-button" href="catalog.html">открыть каталог</a>
                 <div class="radio-slide">
                   <input class=" custom-radio checked" name="page" type="radio" id="first-page-one" value="red">
                   <label for="first-page-one"></label>
@@ -112,7 +112,7 @@
                 </div>
                 <a class="back arrow back-first"></a>
                 <a class="forward arrow"></a>
-                <a class="catalog-button" id="red-button" href="catalog.html">открыть каталог</a>
+                <a class="catalog-button red-button" href="catalog.html">открыть каталог</a>
                 <div class="radio-slide">
                   <input class="custom-radio-one custom-radio" name="color" type="radio" id="second-page-one" value="red">
                   <label for="second-page-one"></label>
@@ -126,7 +126,7 @@
           <section class="popular-good">
             <div class="block-header">
               <h2>Популярные товары:</h2>
-              <a id="red-button" href="catalog.html">Все популярные товары</a>
+              <a class="red-button" href="catalog.html">Все популярные товары</a>
             </div>
             <div class="goods-catalog">
 
@@ -135,7 +135,7 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <div class="good-img-container"></div>
+                <div class="good-img-container"> <img src="img/bfg-9000.jpg" alt="Перфоратор BFG-9000" width="184" height="164"> </div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 9000</b></h4>
                   <div class="old-price">32500 Р.</div>
@@ -148,7 +148,7 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <div class="good-img-container"></div>
+                <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 3000</b></h4>
                   <span class="old-price">22500 Р.</span>
@@ -161,7 +161,7 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <div class="good-img-container"></div>
+                <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
                   <span class="old-price">30500 Р.</span>
@@ -174,7 +174,7 @@
                   <a class="buy-button" href="#">Купить</a>
                   <a class="choose-button"href="#">В закладки</a>
                 </div>
-                <div class="good-img-container"></div>
+                <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-2000" width="127" height="112"> </div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 2000</b></h4>
                   <span class="old-price"></span>
@@ -189,7 +189,7 @@
 
             <div class="block-header">
               <h2>Популярные производители:</h2>
-              <a class="popular-developers-link" id="red-button" href="catalog.html"> Все производители </a>
+              <a class="red-button popular-developers-link" id="red-button" href="catalog.html"> Все производители </a>
             </div>
 
             <div class="developers">
@@ -294,11 +294,11 @@
                 <li>ЖелДорЭкспедиция</li>
               </ul>
 
-              <a id="red-button" href="#">Подробнее о компании</a>
+              <a class="red-button" href="#">Подробнее о компании</a>
 
             </div>
 
-            <div class="contacts">
+            <div class="contact">
 
               <h2>Контакты</h2>
 
@@ -309,12 +309,31 @@
                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1590713438094!5m2!1sru!2sru" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                </div>
 
-               <button class="write-us" id="red-button" type='button' name='write-us-popup-trigger'>Заблудились? Напишите нам!</button> <!--Поменял, так как через кнопку легче через js попап вызывать-->
+               <button class="red-button write-us" id="red-button" type='button' name='write-us-popup-trigger'>Заблудились? Напишите нам!</button> <!--Поменял, так как через кнопку легче через js попап вызывать-->
 
             </div>
           </section>
         </div>
-
+        <section class="write-us-popup hidden">
+          <form class="write-us-form" action="index.html" method="get">
+            <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button> <!---Через js ему event click добавлю чтоб добавлял класс hidden-->
+            <div class="write-us-item">
+              <label for="user-name">Ваше имя:</label>
+              <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="user-name">
+            </div>
+            <div class="write-us-item">
+              <label for="user-mail">Ваш e-mail:</label>
+              <input class="user-email" type="text" name="user-mail" placeholder="email@example.com" id="user-mail">
+            </div>
+            <div class="write-us-item">
+              <label for="user-message">Текст письма:</label>
+              <textarea class="user-message" name="name" placeholder="В свободной форме" id="user-message"></textarea>
+            </div>
+            <div class="write-us-item">
+              <button class="send-message-button red-button" type="submit" name="submit-button">отправить</button>
+            </div>
+          </form>
+        </section>
       </div>
     </main>
 
@@ -368,17 +387,8 @@
         </div>
       </div>
     </footer>
-
-    <section class="write-us-popup hidden">
-      <form class="write-us" action="index.html" method="get">
-        <button class="quit-button" type="button" name="quit-button"> <img src="img/icon-close.svg" alt="закрыть"> </button> <!---Через js ему event click добавлю чтоб добавлял класс hidden-->
-        <label for="user-name">Ваше имя:</label> <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="user-name">
-        <label for="user-name">Ваш e-mail:</label> <input class="user-email" type="text" name="user-mail" placeholder="email@example.com" id="user-mail">
-        <label for="user-name">Текст письма:</label> <textarea class="message" name="name" rows="3" cols="10" placeholder="В свободной форме"></textarea><!--Разобраться с rows and cols--->
-        <button class="send-message-button" type="submit" name="submit-button" value="оформить заказ"></button>
-      </form>
-    </section>
     <script src="js/slider-script.js"></script>
     <script src="js/slider2-script.js"></script>
+    <script src="js/write-us-popup.js"></script>
   </body>
 </html>
