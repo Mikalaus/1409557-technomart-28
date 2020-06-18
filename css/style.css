@@ -156,6 +156,7 @@ main{
 
 .search-field p::before{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   width: 17px;
   height: 17px;
@@ -213,6 +214,7 @@ main{
 
 .header-goods .marked::before{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   width: 14px;
   height: 16px;
@@ -233,6 +235,7 @@ main{
 
 .header-goods .chosen-products::before{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   width: 15px;
   height: 15px;
@@ -302,6 +305,7 @@ main{
 .phone::before{
   content: "";
   display: inline-block;
+  vertical-align: baseline;
   width: 19px;
   height: 19px;
   background: url("../img/icon-phone.svg");
@@ -311,6 +315,7 @@ main{
 
 .contacts p{
   display: inline-block;
+  vertical-align: baseline;
   min-width: 251px;
   font-family: 'Cuprum';
   font-weight: normal;
@@ -386,6 +391,7 @@ main{
 
 .user-reg .log-in::before{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   width: 20px;
   height: 17px;
@@ -550,6 +556,7 @@ main{
 }
 
 .slider .arrow{
+  vertical-align: baseline;
   width: 22px;
   height: 20px;
   margin-top: 7px;
@@ -601,6 +608,7 @@ main{
 .custom-radio+label::before{
   content: '';
   display: inline-block;
+  vertical-align: baseline;
   width: 8px;
   height: 8px;
   flex-shrink: 0;
@@ -683,12 +691,14 @@ background-color: red;
 }
 
 .goods{
+  position: relative;
   width: 220px;
   height: 318px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #EAEAEA;
+  overflow: hidden;
 }
 
 .goods h4{
@@ -735,7 +745,7 @@ background-color: red;
   display: block;
   font-family: 'PT Sans';
   width: 121px;
-  height: 38px;
+  height: 30px;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -743,7 +753,6 @@ background-color: red;
   text-align: center;
   padding-top: 10px;
   color: #fff;
-  margin-top: 0;
 }
 
 .bfg2 .new-price{
@@ -1056,6 +1065,7 @@ main .block-header{ /* популярные производители */
 
 .about-us .write-us{
   display: inline-block;
+  vertical-align: baseline;
   padding-top: 13px;
   padding-bottom: 10px;
   width: 300px;
@@ -1186,6 +1196,7 @@ footer{
 
 .social-media a{
   display: inline-block;
+  vertical-align: baseline;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1217,6 +1228,7 @@ footer{
 
 .bottom-footer .feedback{
   display: inline-block;
+  vertical-align: baseline;
   color: white;
   font-family: 'Cuprum';
   font-size: 16px;
@@ -1230,6 +1242,7 @@ footer{
 
 .bottom-footer .designed-by{
   display: inline-block;
+  vertical-align: baseline;
   color: white;
   font-family: 'Cuprum';
   font-size: 16px;
@@ -1263,6 +1276,7 @@ footer{
 
 .catalog-chosen-products{
   display: inline-block;
+  vertical-align: baseline;
   box-sizing: border-box;
   width: 142px;
   background-color: var(--basic-red);
@@ -1368,6 +1382,7 @@ footer{
 
 .user-links .order-list::after{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   width: 6px;
   height: 6px;
@@ -1396,8 +1411,13 @@ footer{
   line-height: 18px;
 }
 
+.inner-page-nav img{
+  margin-bottom: -1px;
+}
+
 .inner-page-nav a:not(.not-visible-after)::after{
   display: inline-block;
+  vertical-align: baseline;
   content: "";
   background: url("../img/icon-right-small.svg") no-repeat center;
   width: 12px;
@@ -1525,6 +1545,7 @@ footer{
 .price-filter input{
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   padding: 10px 0;
   width: 95px;
   background: #F7F3EC;
@@ -1862,7 +1883,7 @@ footer{
 
 .write-us-item:nth-of-type(3){
   width: 460px;
-  margin-bottom: 74px;
+  margin-bottom: 94px;
 }
 
 .user-message,
@@ -1894,7 +1915,7 @@ footer{
 .user-message{
   padding-top: 6.29px;
   padding-left: 12px;
-  padding-bottom: 83.71px;
+  padding-bottom: 85.71px;
   resize: none;
 }
 
@@ -1911,4 +1932,32 @@ footer{
   font-size: 14px;
   line-height: 18px;
   outline: none;
+}
+
+.new-good-mark{
+  position: absolute;
+  top: -999px;
+  right: -999px;
+}
+
+.new .new-good-mark{
+  width: 67px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  transform: rotate(45deg);
+  text-align: center;
+  background-color: var(--basic-red);
+  font-family: 'Cuprum';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 18px;
+  top: 10px;
+  right: -29px;
+}
+
+.content .empty{
+  font-size: 0;
 }

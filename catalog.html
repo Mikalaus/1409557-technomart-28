@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="normalize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
           </div>
 
           <div class="contacts">
-            <a href="#" class="phone">+7 (812) 555-05-55</a>
+            <tel class="phone">+7 (812) 555-05-55</tel>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
 
@@ -72,7 +72,7 @@
           <div class="catalog">
 
             <nav class="inner-page-nav">
-              <a href="index.html"> <img src="img/icon-home.svg" alt="home">  </a>
+              <a href="index.html"> <img src="img/icon-home.svg" width="14" height="12" alt="home">  </a>
               <a href="#">Каталог</a>
               <a href="#">Инструмент</a> <!--Стрелочки через псевдоэлементы скорее всего буду делать-->
               <a class="not-visible-after">Перфораторы</a>
@@ -89,7 +89,7 @@
                 <form class="filter-catalog" action="index.html" method="post">
                   <fieldset class="price-filter">
                     <legend>Цена:</legend>
-                    <span class="img-container"> <img src="img/filter-range.png" alt="filter-range"> </span>
+                    <span class="img-container"> <img src="img/filter-range.png" width="180" height="2" alt="filter-range"> </span>
                     <div class="input-wrapper">
                       <input type="text" name="min-range" id="min-range" value="0">
                       <span class="dash-after">-</span>
@@ -124,7 +124,8 @@
                 </div>
 
                 <div class="good-cards">
-                  <article class="goods bfg6">
+                  <div class="new-good-mark">new</div>
+                  <article class="goods">
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
                       <a class="choose-button"href="#">В закладки</a>
@@ -137,10 +138,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg6">
+                  <article class="goods">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
@@ -150,10 +152,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg6">
+                  <article class="goods new">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
@@ -163,10 +166,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg3 new">
+                  <article class="goods new">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">
@@ -176,10 +180,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg6">
+                  <article class="goods">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
@@ -189,10 +194,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg2 new">
+                  <article class="goods new">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-2000" width="127" height="112"> </div>
                     <div class="content">
@@ -202,10 +208,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg3 new">
+                  <article class="goods new">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">
@@ -215,10 +222,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg6">
+                  <article class="goods">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
@@ -228,10 +236,11 @@
                     </div>
                   </article>
 
-                  <article class="goods bfg3 new">
+                  <article class="goods new">
+                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button" href="#">Купить</a>
-                      <a class="choose-button"href="#">В закладки</a>
+                      <a class="choose-button" href="#">В закладки</a>
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">

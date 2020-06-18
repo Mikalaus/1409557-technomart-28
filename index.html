@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
@@ -46,17 +47,17 @@
 
           </div>
 
-        <nav class="header-nav">
-          <a href="index.html">Главная</a>
-          <a href="#">Компания</a>
-          <a href="catalog.html">Каталог</a>
-          <a href="#">Новости</a>
-          <a href="#">Спецпредложения</a>
-          <a href="#">Доставка</a>
-          <a href="#">Контакты</a>
-        </nav>
+          <nav class="header-nav">
+            <a href="index.html">Главная</a>
+            <a href="#">Компания</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="#">Новости</a>
+            <a href="#">Спецпредложения</a>
+            <a href="#">Доставка</a>
+            <a href="#">Контакты</a>
+          </nav>
+        </div>
       </div>
-    </div>
     </header>
 
     <main>
@@ -130,10 +131,11 @@
             </div>
             <div class="goods-catalog">
 
-              <article class="goods bfg9"> <!-- как выровнять изображения? -->
+              <article class="goods"> <!-- как выровнять изображения? -->
+                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button"href="#">В закладки</a>
+                  <a class="choose-button" href="#">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-9000.jpg" alt="Перфоратор BFG-9000" width="184" height="164"> </div>
                 <div class="content">
@@ -143,10 +145,11 @@
                 </div>
               </article>
 
-              <article class="goods bfg3 new">
+              <article class="goods new">
+                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button"href="#">В закладки</a>
+                  <a class="choose-button" href="#">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                 <div class="content">
@@ -156,10 +159,11 @@
                 </div>
               </article>
 
-              <article class="goods bfg6">
+              <article class="goods">
+                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button"href="#">В закладки</a>
+                  <a class="choose-button" href="#">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                 <div class="content">
@@ -169,15 +173,16 @@
                 </div>
               </article>
 
-              <article class="goods bfg2 new">
+              <article class="goods new">
+                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button"href="#">В закладки</a>
+                  <a class="choose-button" href="#">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-2000" width="127" height="112"> </div>
                 <div class="content">
                   <h4><b>Перфоратор BOSCH BFG 2000</b></h4>
-                  <span class="old-price"></span>
+                  <span class="old-price empty">price</span>
                   <span class="new-price">12500 Р.</span>
                 </div>
               </article>
@@ -195,35 +200,35 @@
             <div class="developers">
 
               <div class="dev">
-                <a> <img src="img/bosch.png" alt="BOSCH"> </a>
+                <a> <img src="img/bosch.png" width="126" height="37" alt="BOSCH"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/Makita.png" alt="makita"> </a>
+                <a> <img src="img/makita.png" width="123" height="40" alt="makita"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/DeWALT.png" alt="DeWALT"> </a>
+                <a> <img src="img/dewalt.png" width="146" height="44" alt="DeWALT"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/interskol.png" alt="ИНТЕРСКОЛ"> </a>
+                <a> <img src="img/interskol.png" width="200" height="75" alt="ИНТЕРСКОЛ"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/Hitachi.png" alt="HITACHI"> </a>
+                <a> <img src="img/hitachi.png" width="169" height="31" alt="HITACHI"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/LG.png" alt="LG"> </a>
+                <a> <img src="img/lg.png" width="121" height="73" alt="LG"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/AEG.png" alt="AEG"> </a>
+                <a> <img src="img/aeg.png" width="151" height="96" alt="AEG"> </a>
               </div>
 
               <div class="dev">
-                <a> <img src="img/Metabo.png" alt="metabo" ></a>
+                <a> <img src="img/metabo.png" width="204" height="69" alt="metabo" ></a>
               </div>
 
             </div>
