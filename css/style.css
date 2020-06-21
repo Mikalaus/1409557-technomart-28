@@ -755,10 +755,6 @@ background-color: red;
   color: #fff;
 }
 
-.bfg2 .new-price{
-  margin-top: 18px;
-}
-
 .goods .new-price::after{
   content: "";
   display: block;
@@ -1108,7 +1104,8 @@ footer{
   padding-bottom: 14px;
   max-width: 137px;
   margin-bottom: 22px;
-  border-bottom: solid 5px #B52933
+  border-bottom: solid 5px #B52933;
+  z-index: 1;
 }
 
 .top-left-footer-part .address{
@@ -1270,8 +1267,8 @@ footer{
 
 /* catalog.html */
 
-.catalog-marked{
-  margin-right: 38px;
+.catalog-fix{
+  margin-left: -2px;
 }
 
 .catalog-chosen-products{
@@ -1835,8 +1832,10 @@ footer{
 .write-us-popup{
   position: fixed;
   width: 620px;
-  left: 30%;
-  top: 20%;
+  left: 50%;
+  margin-left: -310px;
+  top: 50%;
+  margin-top: -235px;
   z-index: 15;
 }
 
@@ -1934,6 +1933,21 @@ footer{
   outline: none;
 }
 
+.map-popup{
+  position: fixed;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+  width: 943px;
+  height: 449px;
+  top: 50%;
+  margin-top: -221px;
+  left: 50%;
+  margin-left: -471.5px;
+  z-index: 15;
+  animation: map-popup-animation 0.6s ease-in-out;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
+}
+
 .new-good-mark{
   position: absolute;
   top: -999px;
@@ -1960,4 +1974,91 @@ footer{
 
 .content .empty{
   font-size: 0;
+}
+
+.chosen-product-popup{
+  position: fixed;
+  top: 50%;
+  margin-top: -141px;
+  left: 50%;
+  margin-left: -310px;
+  border-top: 7px solid var(--basic-red);
+  width: 620px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  z-index: 15;
+}
+
+.chosen-product-popup .top-part{
+  display: flex;
+  height: 163px;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/icon-mark.svg") no-repeat 81px center;
+  background-color: white;
+  z-index: 100;
+}
+
+.chosen-product-popup h1{
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.chosen-product-popup .bottom-part{
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1F1F1;
+}
+
+.chosen-product-popup button{
+  box-sizing: border-box;
+  width: 192px;
+  height: 38px;
+  font-family: 'Cuprum';
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: auto;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.chosen-product-popup .quit-button{
+  width: auto;
+  margin-top: -8px;
+}
+
+.chosen-product-popup .confirm{
+  margin-right: 10px;
+  background-color: var(--basic-red);
+  color: white;
+}
+
+.chosen-product-popup .confirm:hover{
+  border: 2px solid black;
+}
+
+.chosen-product-popup .continue:hover{
+  border: 2px solid var(--basic-red);
+}
+
+.chosen-product-popup .confirm:active{
+  background-color: #BA2732;
+}
+
+.chosen-product-popup .continue:active{
+  background-color: #efefef;
+}
+
+@keyframes map-popup-animation {
+  0% {top: 0;}
+  50% {top: 60%;}
+  70% {top: 40%;}
+  85% {top: 55%;}
+  100% {top: 50%;}
 }

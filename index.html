@@ -134,8 +134,8 @@
               <article class="goods"> <!-- как выровнять изображения? -->
                 <div class="new-good-mark">new</div>
                 <div class="item-hover">
-                  <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button" href="#">В закладки</a>
+                  <a class="buy-button">Купить</a>
+                  <a class="choose-button">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-9000.jpg" alt="Перфоратор BFG-9000" width="184" height="164"> </div>
                 <div class="content">
@@ -148,8 +148,8 @@
               <article class="goods new">
                 <div class="new-good-mark">new</div>
                 <div class="item-hover">
-                  <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button" href="#">В закладки</a>
+                  <a class="buy-button">Купить</a>
+                  <a class="choose-button">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                 <div class="content">
@@ -162,8 +162,8 @@
               <article class="goods">
                 <div class="new-good-mark">new</div>
                 <div class="item-hover">
-                  <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button" href="#">В закладки</a>
+                  <a class="buy-button">Купить</a>
+                  <a class="choose-button">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                 <div class="content">
@@ -176,8 +176,8 @@
               <article class="goods new">
                 <div class="new-good-mark">new</div>
                 <div class="item-hover">
-                  <a class="buy-button" href="#">Купить</a>
-                  <a class="choose-button" href="#">В закладки</a>
+                  <a class="buy-button">Купить</a>
+                  <a class="choose-button">В закладки</a>
                 </div>
                 <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-2000" width="127" height="112"> </div>
                 <div class="content">
@@ -311,7 +311,7 @@
                заехав в наш офис:</p>
 
                <div class="map">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1590713438094!5m2!1sru!2sru" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                 <img src="img/map-img.png" alt="map" width="300" height="158">
                </div>
 
                <button class="red-button write-us" id="red-button" type='button' name='write-us-popup-trigger'>Заблудились? Напишите нам!</button> <!--Поменял, так как через кнопку легче через js попап вызывать-->
@@ -324,20 +324,34 @@
             <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button> <!---Через js ему event click добавлю чтоб добавлял класс hidden-->
             <div class="write-us-item">
               <label for="user-name">Ваше имя:</label>
-              <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="user-name">
+              <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="user-name" required>
             </div>
             <div class="write-us-item">
               <label for="user-mail">Ваш e-mail:</label>
-              <input class="user-email" type="text" name="user-mail" placeholder="email@example.com" id="user-mail">
+              <input class="user-email" type="text" name="user-mail" placeholder="email@example.com" id="user-mail" required>
             </div>
             <div class="write-us-item">
               <label for="user-message">Текст письма:</label>
-              <textarea class="user-message" name="name" placeholder="В свободной форме" id="user-message"></textarea>
+              <textarea class="user-message" name="name" placeholder="В свободной форме" id="user-message" required></textarea>
             </div>
             <div class="write-us-item">
               <button class="send-message-button red-button" type="submit" name="submit-button">отправить</button>
             </div>
           </form>
+        </section>
+        <section class="map-popup">
+          <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1590713438094!5m2!1sru!2sru" width="943" height="442" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+        <section class="chosen-product-popup">
+          <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button>
+          <div class="top-part">
+            <h1>Товар добавлен в корзину</h1>
+          </div>
+          <div class="bottom-part">
+            <button type="submit" class="confirm">оформить заказ</button>
+            <button type="button" class="continue">продолжить покупки</button>
+          </div>
         </section>
       </div>
     </main>
@@ -395,5 +409,7 @@
     <script src="js/slider-script.js"></script>
     <script src="js/slider2-script.js"></script>
     <script src="js/write-us-popup.js"></script>
+    <script src="js/map-popup.js"></script>
+    <script src="js/good-choose-popup.js"></script>
   </body>
 </html>
