@@ -29,3 +29,10 @@ for (var i = 0; i < confirmButtons.length; i++) {
 quitGoodPopup .addEventListener('click', function(){
   goodPopup.classList.add('hidden');
 });
+
+window.addEventListener('keydown', function(evt){
+  if(evt.keyCode === 27){
+    evt.preventDefault();
+    goodPopup.classList.add('hidden');
+  }
+});

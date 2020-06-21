@@ -35,3 +35,10 @@ writeUsForm.addEventListener('submit', function(){
   localStorage.setItem('name', userName.value);
   localStorage.setItem('email', userEmail.value);
 });
+
+window.addEventListener('keydown', function(evt){
+  if(evt.keyCode === 27){
+    evt.preventDefault();
+    popup.classList.add('hidden');
+  }
+});

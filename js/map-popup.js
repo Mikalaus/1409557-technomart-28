@@ -11,3 +11,10 @@ map.addEventListener('click', function(){
 quit.addEventListener('click', function(){
   mapPopup.classList.add('hidden')
 });
+
+window.addEventListener('keydown', function(evt){
+  if(evt.keyCode === 27){
+    evt.preventDefault();
+    mapPopup.classList.add('hidden');
+  }
+});
