@@ -646,6 +646,7 @@ background-color: red;
   background: #63A63E;
   margin-bottom: 10px;
   padding-left: 9px;
+  cursor: pointer;
 }
 
 .item-hover .buy-button:hover{
@@ -675,6 +676,7 @@ background-color: red;
   color: #32425C;
   padding-top: 8px;
   padding-bottom: 6px;
+  cursor: pointer;
 }
 
 .item-hover .choose-button:hover{
@@ -699,6 +701,7 @@ background-color: red;
   align-items: center;
   border: 1px solid #EAEAEA;
   overflow: hidden;
+  cursor: default;
 }
 
 .goods h4{
@@ -1057,6 +1060,7 @@ main .block-header{ /* популярные производители */
 
 .about-us .map{
   margin-bottom: 17px;
+  cursor: pointer;
 }
 
 .about-us .write-us{
@@ -1865,6 +1869,7 @@ footer{
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .write-us-item{
