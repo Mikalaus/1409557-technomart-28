@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style-min.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   </head>
@@ -12,7 +12,7 @@
 
     <header>
       <div class="top-header-wrapper">
-        <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
+        <div class="top-header">
           <a class="logo" href="index.html">Техномарт</a>
 
           <div class="search-wrapper">
@@ -22,14 +22,14 @@
           </div>
 
           <div class="header-goods">
-            <a class="marked" href="#">Закладки: 0</a>
-            <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+            <a class="marked" href="#">Закладки: <span class="marked-number">0</span> </a>
+            <a class="chosen-products" href="#">Корзина: <span class="buy-number">0</span></a>
             <a href="#" class="confirm">Оформить заказ</a>
           </div>
         </div>
       </div>
       <div class="ui-header-wrapper">
-        <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+        <div class="ui-header">
           <div class="description">
             <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
           </div>
@@ -230,7 +230,7 @@
           </section>
 
           <div class="services-wrapper">
-            <section class="services"> <!---Можно через флекс или флоаты сделать-->
+            <section class="services">
               <h2>Сервисы</h2>
               <p>Хороший интернет-магазин отличается от плохого не только ценами!
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -308,14 +308,14 @@
                  <img src="img/map-img.png" alt="map" width="300" height="158">
                </div>
 
-               <button class="red-button write-us" id="red-button" type='button' name='write-us-popup-trigger'>Заблудились? Напишите нам!</button> <!--Поменял, так как через кнопку легче через js попап вызывать-->
+               <button class="red-button write-us" id="red-button" type='button' name='write-us-popup-trigger'>Заблудились? Напишите нам!</button>
 
             </div>
           </section>
         </div>
         <section class="write-us-popup hidden">
           <form class="write-us-form" action="index.html" method="get">
-            <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button> <!---Через js ему event click добавлю чтоб добавлял класс hidden-->
+            <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button> 
             <div class="write-us-item">
               <label for="user-name">Ваше имя:</label>
               <input class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" id="user-name" required>
@@ -400,10 +400,10 @@
         </div>
       </div>
     </footer>
-    <script src="js/slider-script.js"></script>
-    <script src="js/slider2-script.js"></script>
-    <script src="js/write-us-popup.js"></script>
-    <script src="js/map-popup.js"></script>
-    <script src="js/good-choose-popup.js"></script>
+    <script src="js/slider-script-min.js"></script>
+    <script src="js/slider2-script-min.js"></script>
+    <script src="js/write-us-popup-min.js"></script>
+    <script src="js/map-popup-min.js"></script>
+    <script src="js/good-choose-popup-min.js"></script>
   </body>
 </html>

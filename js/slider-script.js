@@ -7,26 +7,26 @@ let back = document.querySelector('.back-first');
 
 perforatorSlide.classList.add('hidden');
 
-firstRadio.onclick = function (){
-    if (firstRadio.checked){
-      perforatorSlide.classList.add('hidden');
-      screwSlide.classList.remove('hidden');
-    }
-}
+firstRadio.addEventListener('click', function(){
+  if (firstRadio.checked){
+    perforatorSlide.classList.add('hidden');
+    screwSlide.classList.remove('hidden');
+  }
+});
 
-secondRadio.onclick = function (){
-    if (secondRadio.checked){
-      perforatorSlide.classList.remove('hidden');
-      screwSlide.classList.add('hidden');
-    }
-}
+secondRadio.addEventListener('click', function(){
+  if (secondRadio.checked){
+    perforatorSlide.classList.remove('hidden');
+    screwSlide.classList.add('hidden');
+  }
+});
 
-forward.onclick = function (){
+forward.addEventListener('click', function(){
   perforatorSlide.classList.remove('hidden');
   screwSlide.classList.add('hidden');
-}
+});
 
-back.onclick = function (){
+back.addEventListener('click', function(){
   perforatorSlide.classList.add('hidden');
   screwSlide.classList.remove('hidden');
-}
+});

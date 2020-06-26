@@ -1,16 +1,32 @@
 let goodPopup = document.querySelector('.chosen-product-popup');
 let quitGoodPopup = goodPopup.querySelector('.quit-button');
+let markedProducts = document.querySelector('.marked');
+let buyProducts = document.querySelector('.chosen-products');
+var buyButtons = document.querySelectorAll('.buy-button');
+var buyNumber = document.querySelector('.buy-number');
+var markedNumber = document.querySelector('.marked-number');
 var chooseButtons = document.querySelectorAll('.choose-button');
 var confirmButtons = goodPopup.querySelectorAll('.confirm');
 var continueButtons = goodPopup.querySelectorAll('.continue');
-
-console.log(chooseButtons);
+var buyProductsNumber = 0;
+var markedProductsNumber = 0;
 
 goodPopup.classList.add('hidden');
 
+for (var i = 0; i < buyButtons.length; i++) {
+  buyButtons[i].addEventListener('click', function(){
+    goodPopup.classList.remove('hidden');
+    buyProducts.classList.add('chosen-products-background');
+    buyProductsNumber++;
+    buyNumber.innerHTML = buyProductsNumber;
+  });
+}
+
 for (var i = 0; i < chooseButtons.length; i++) {
   chooseButtons[i].addEventListener('click', function(){
-    goodPopup.classList.remove('hidden');
+    markedProducts.classList.add('chosen-products-background');
+    markedProductsNumber++;
+    markedNumber.innerHTML = markedProductsNumber;
   });
 }
 

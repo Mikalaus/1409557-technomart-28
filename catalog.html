@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style-min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
         <div class="top-header-wrapper">
-          <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
+          <div class="top-header">
             <a class="logo" href="index.html">Техномарт</a>
 
             <div class="search-wrapper">
@@ -21,14 +21,14 @@
             </div>
 
             <div class="header-goods">
-              <a class="marked" href="#">Закладки: 0</a>
-              <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+              <a class="marked" href="#">Закладки: <span class="marked-number">0</span> </a>
+              <a class="chosen-products" href="#">Корзина: <span class="buy-number">0</span></a>
               <a href="#" class="confirm">Оформить заказ</a>
             </div>
           </div>
         </div>
         <div class="ui-header-wrapper">
-          <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+          <div class="ui-header">
             <div class="description catalog-fix">
               <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
             </div>
@@ -72,7 +72,7 @@
             <nav class="inner-page-nav">
               <a href="index.html"> <img src="img/icon-home.svg" width="14" height="12" alt="home">  </a>
               <a href="#">Каталог</a>
-              <a href="#">Инструмент</a> <!--Стрелочки через псевдоэлементы скорее всего буду делать-->
+              <a href="#">Инструмент</a>
               <a class="not-visible-after">Перфораторы</a>
             </nav>
 
@@ -84,7 +84,7 @@
                 <div class="title">
                   <h3 class="filter-title">Фильтр:</h3>
                 </div>
-                <form class="filter-catalog" action="index.html" method="post">
+                <form class="filter-catalog" action="https://echo.htmlacademy.ru/" method="get">
                   <fieldset class="price-filter">
                     <legend>Цена:</legend>
                     <div class="range-container">
@@ -121,7 +121,7 @@
                   <a class="filter-item price-filter active">По цене</a>
                   <a class="filter-item type-filter" href="#">По типу</a>
                   <a class="filter-item function-filter" href="#">По функционалу</a>
-                  <a class="up-icon" href="#"></a>
+                  <a class="up-icon active" href="#"></a>
                   <a class="down-icon" href="#"></a>
                 </div>
 
@@ -327,6 +327,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/good-choose-popup.js"></script>
+    <script src="js/good-choose-popup-min.js"></script>
   </body>
 </html>

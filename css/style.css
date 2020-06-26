@@ -241,11 +241,12 @@ main{
   height: 15px;
   margin-bottom: -1px;
   margin-right: 8px;
-  background: url("../img/icon-cart.svg")
+  background: url("../img/icon-cart-hover.svg");
+  opacity: 0.3;
 }
 
 .chosen-products:hover::before{
-  background: url("../img/icon-cart-hover.svg")
+  opacity: 1;
 }
 
 .header-goods .chosen-products:active::before{
@@ -1755,8 +1756,16 @@ footer{
   background: url("../img/icon-down-dir.svg");
 }
 
+.small-filter .up-icon.active{
+  background: url("../img/icon-up-dir-active.svg");
+}
+
 .small-filter .down-icon:hover{
   background: url("../img/icon-down-dir-hover.svg")
+}
+
+.small-filter .down-icon.active{
+  background: url("../img/icon-down-dir-active.svg");
 }
 
 .small-filter .up-icon:hover{
@@ -1947,6 +1956,7 @@ footer{
   position: fixed;
   box-sizing: border-box;
   border-top: 7px solid var(--basic-red);
+  background-color: white;
   width: 943px;
   height: 449px;
   top: 50%;
@@ -2061,6 +2071,10 @@ footer{
 
 .chosen-product-popup .continue:active{
   background-color: #efefef;
+}
+
+.chosen-products-background{
+  background-color: var(--basic-red);
 }
 
 @keyframes map-popup-animation {

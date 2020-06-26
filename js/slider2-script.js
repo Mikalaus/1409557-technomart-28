@@ -9,26 +9,26 @@ guarantee.classList.add('hidden');
 credit.classList.add('hidden');
 delivery.classList.remove('hidden');
 
-deliveryRadio.onclick = function (){
-    if (deliveryRadio.checked){
-      guarantee.classList.add('hidden');
-      credit.classList.add('hidden');
-      delivery.classList.remove('hidden');
-    }
-}
+deliveryRadio.addEventListener('click', function(){
+  if (deliveryRadio.checked){
+    guarantee.classList.add('hidden');
+    credit.classList.add('hidden');
+    delivery.classList.remove('hidden');
+  }
+});
 
-guaranteeRadio.onclick = function (){
-    if (guaranteeRadio.checked){
-      credit.classList.add('hidden');
-      delivery.classList.add('hidden');
-      guarantee.classList.remove('hidden');
-    }
-}
+guaranteeRadio.addEventListener('click', function(){
+  if (guaranteeRadio.checked){
+    credit.classList.add('hidden');
+    delivery.classList.add('hidden');
+    guarantee.classList.remove('hidden');
+  }
+});
 
-creditRadio.onclick = function (){
-    if (creditRadio.checked){
-      guarantee.classList.add('hidden');
-      delivery.classList.add('hidden');
-      credit.classList.remove('hidden');
-    }
-}
+creditRadio.addEventListener('click', function(){
+  if (creditRadio.checked){
+    guarantee.classList.add('hidden');
+    delivery.classList.add('hidden');
+    credit.classList.remove('hidden');
+  }
+});
