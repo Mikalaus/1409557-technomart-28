@@ -88,6 +88,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 940px;
   width: 100%;
   margin-top: 59px;
   background-color: var(--basic-background);
@@ -1096,8 +1097,8 @@ footer{
 }
 
 .top-footer .top-left-footer-part{
-  min-width: 324px;
-  margin-right: 0;
+  min-width: 327px;
+  margin-right: -3px;
 }
 
 .top-left-footer-part .logo{ /* логотип */
@@ -1840,6 +1841,10 @@ footer{
 
 .top-header .chosen-products-catalog{
   padding-right: 23px;
+}
+
+.red-button:hover{
+  background-color: #CA2C37;
 }
 
 .red-button:active{
