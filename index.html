@@ -11,52 +11,50 @@
   <body>
 
     <header>
-      <div class="center-wrapper">
-        <div class="top-header-wrapper">
-          <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
-            <a class="logo" href="index.html">Техномарт</a>
+      <div class="top-header-wrapper">
+        <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
+          <a class="logo" href="index.html">Техномарт</a>
 
-            <div class="search-wrapper">
-              <form class="search-field" action="index.html" method="get" id="search-field">
-                <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
-              </form>
-            </div>
-
-            <div class="header-goods">
-              <a class="marked" href="#">Закладки: 0</a>
-              <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
-              <a href="#" class="confirm">Оформить заказ</a>
-            </div>
-          </div>
-        </div>
-        <div class="ui-header-wrapper">
-          <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
-            <div class="description">
-              <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
-            </div>
-
-            <div class="contacts">
-              <a href="#" class="phone">+7 (812) 555-05-55</a>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            </div>
-
-            <div class="user-reg">
-              <a href="#" class="log-in">Войти</a>
-              <a href="#" class="reg">Регистрация</a>
-            </div>
-
+          <div class="search-wrapper">
+            <form class="search-field" action="index.html" method="get" id="search-field">
+              <p><input type="search" name="search-field" placeholder="Поиск:" class="search" id="search"></p>
+            </form>
           </div>
 
-          <nav class="header-nav">
-            <a href="index.html">Главная</a>
-            <a href="#">Компания</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="#">Новости</a>
-            <a href="#">Спецпредложения</a>
-            <a href="#">Доставка</a>
-            <a href="#">Контакты</a>
-          </nav>
+          <div class="header-goods">
+            <a class="marked" href="#">Закладки: 0</a>
+            <a class="chosen-products" href="#">Корзина: 0</a> <!---поскольку здесь через js я еще подумаю как счетчик реализую-->
+            <a href="#" class="confirm">Оформить заказ</a>
+          </div>
         </div>
+      </div>
+      <div class="ui-header-wrapper">
+        <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
+          <div class="description">
+            <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
+          </div>
+
+          <div class="contacts">
+            <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+
+          <div class="user-reg">
+            <a href="#" class="log-in">Войти</a>
+            <a href="#" class="reg">Регистрация</a>
+          </div>
+
+        </div>
+
+        <nav class="header-nav">
+          <a href="index.html">Главная</a>
+          <a href="#">Компания</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="#">Новости</a>
+          <a href="#">Спецпредложения</a>
+          <a href="#">Доставка</a>
+          <a href="#">Контакты</a>
+        </nav>
       </div>
     </header>
 
@@ -131,8 +129,7 @@
             </div>
             <div class="goods-catalog">
 
-              <article class="goods"> <!-- как выровнять изображения? -->
-                <div class="new-good-mark">new</div>
+              <article class="goods">
                 <div class="item-hover">
                   <a class="buy-button">Купить</a>
                   <a class="choose-button">В закладки</a>
@@ -146,7 +143,6 @@
               </article>
 
               <article class="goods new">
-                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button">Купить</a>
                   <a class="choose-button">В закладки</a>
@@ -160,7 +156,6 @@
               </article>
 
               <article class="goods">
-                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button">Купить</a>
                   <a class="choose-button">В закладки</a>
@@ -174,7 +169,6 @@
               </article>
 
               <article class="goods new">
-                <div class="new-good-mark">new</div>
                 <div class="item-hover">
                   <a class="buy-button">Купить</a>
                   <a class="choose-button">В закладки</a>
@@ -341,7 +335,7 @@
         </section>
         <section class="map-popup">
           <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1590713438094!5m2!1sru!2sru" width="943" height="442" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1590713438094!5m2!1sru!2sru" width="943" height="442" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
         <section class="chosen-product-popup">
           <button class="quit-button" type="reset" name="quit-button"> <img src="img/icon-close.svg" width="21" height="21" alt="закрыть"> </button>
@@ -392,15 +386,15 @@
               Все права защищены</div>
 
             <div class="social-media">
-              <a href="#" class="vk"></a>
-              <a href="#" class="facebook"></a>
-              <a href="#" class="instagram"></a>
+              <a href="#" class="vk empty">ВКонтакте</a>
+              <a href="#" class="facebook empty">Facebook</a>
+              <a href="#" class="instagram empty">Instagram</a>
             </div>
 
             <div class="feedback-contacts">
               <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
 
-              <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/">htmlacademy.ru</a></div>
+              <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></div>
             </div>
           </div>
         </div>

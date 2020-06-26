@@ -17,7 +17,7 @@
 }
 
 body{
-  width: 100vw;
+  min-width: 940px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -186,7 +186,7 @@ main{
   color: black;
 }
 
-.top-header .header-goods{ /* закладки, корзина, оформить заказ */ /* BUG: Появляется box-shadow при наведении на элементы */
+.top-header .header-goods{ /* закладки, корзина, оформить заказ */
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -221,7 +221,7 @@ main{
   margin-bottom: -2px;
   margin-right: 10px;
   margin-left: -1px;
-  background: url("../img/icon-bookmark.svg");
+  background: url("../img/icon-bookmark-hover.svg");
   opacity: 0.3;
 }
 
@@ -647,6 +647,7 @@ background-color: red;
   margin-bottom: 10px;
   padding-left: 9px;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .item-hover .buy-button:hover{
@@ -677,6 +678,7 @@ background-color: red;
   padding-top: 8px;
   padding-bottom: 6px;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .item-hover .choose-button:hover{
@@ -756,6 +758,8 @@ background-color: red;
   text-align: center;
   padding-top: 10px;
   color: #fff;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .goods .new-price::after{
@@ -1121,6 +1125,8 @@ footer{
 }
 
 .top-footer .footer-nav{
+  max-width: 587px;
+  overflow: hidden;
   display: block;
   margin-top: 20px;
   margin-left: 29px;
@@ -1174,7 +1180,7 @@ footer{
 }
 
 .bottom-footer{
-  max-width: 940px;
+  min-width: 940px;
   position: relative;
   padding-top: 34px;
   padding-bottom: 29px;
@@ -1302,27 +1308,29 @@ footer{
   max-height: 45px;
   background-color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
 }
 
-.user h3:active{
+.profile .profile-name:active{
   color: #C5C5C5;
 }
 
-.user h3{
+.profile .profile-name{
   font-family: 'Cuprum', "Arial", sans-serif;
   font-weight: normal;
   font-size: 21px;
   line-height: 21px;
+  color: black;
 }
 
 .user .profile{
   display: block;
-  width: 20px;
-  height: 18px;
-  background: url("../img/icon-user.svg") no-repeat center;
-  margin-right: 21px;
+  width: 247px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  text-align: center;
+  background: url("../img/icon-user.svg") no-repeat 1px 21px;
 }
 
 .user .quit{
@@ -1330,7 +1338,7 @@ footer{
   width: 20px;
   height: 17px;
   background: url("../img/icon-logout.svg") no-repeat center;
-  margin-left: 20px;
+  margin-right: 17px;
 }
 
 .user .profile:hover{
@@ -1498,41 +1506,39 @@ footer{
   border-bottom: 1px solid #EAEAEA;
 }
 
-.price-filter img{
-  display: block;
-  padding: 39px 20px;
+.price-filter .range-container{
+  width: 220px;
+  height: 80px;
   background: #F7F3EC;
   margin-bottom: 9px;
-  position: relative;
   border-radius: 2px;
-}
-
-.price-filter .img-container{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.price-filter .img-container::before{
-  display: block;
-  content: "";
+.range-container .range-button{
+  outline: none;
+  border: none;
   position: absolute;
-  top: 29px;
+  width: 20px;
+  height: 22px;
+  background: url("../img/filter-button.svg");
+}
+
+.range-container .min{
   left: 18px;
-  width: 20px;
-  height: 22px;
-  z-index: 2;
-  background: url("../img/filter-button.png") center;
 }
 
-.price-filter .img-container::after{
-  display: block;
-  content: "";
-  position: absolute;
-  top: -60px;
-  left: 160px;
-  width: 20px;
-  height: 22px;
-  z-index: 2;
-  background: url("../img/filter-button.png") center;
+.range-container .max{
+  right: 40px;
+}
+
+.range-container .range{
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(90deg, #00CA74 155px, #D7DCDE 155px);
 }
 
 .price-filter .input-wrapper{
@@ -1764,7 +1770,7 @@ footer{
   margin-top: 28px;
 }
 
-.good-cards .goods:not(:nth-child(3n)){
+.good-cards .goods:not(:nth-of-type(3n)){
   margin-right: 17px;
 }
 
@@ -1849,7 +1855,7 @@ footer{
   padding-top: 46px;
   padding-bottom: 37px;
   width: 620px;
-  background: linear-gradient(#FF5257 1.6%, #FFF 1.6% 73.95%, #F4F4F4 73.95% 100%);
+  background: linear-gradient(var(--basic-red) 1.6%, #FFF 1.6% 73.95%, #F4F4F4 73.95% 100%);
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
@@ -1951,14 +1957,13 @@ footer{
   animation: map-popup-animation 0.6s ease-in-out;
 }
 
-.new-good-mark{
-  position: absolute;
-  top: -999px;
-  right: -999px;
+.map-popup iframe{
+  border: none;
 }
 
-.new .new-good-mark{
+.new::before{
   width: 67px;
+  position: absolute;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 10px;
@@ -1972,10 +1977,11 @@ footer{
   color: #fff;
   line-height: 18px;
   top: 10px;
-  right: -29px;
+  left: 135px;
+  content: "new";
 }
 
-.content .empty{
+.empty{
   font-size: 0;
 }
 

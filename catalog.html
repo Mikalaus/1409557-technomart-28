@@ -10,7 +10,6 @@
   </head>
   <body>
     <header>
-      <div class="center-wrapper">
         <div class="top-header-wrapper">
           <div class="top-header"> <!---все иконки через псевдоэлементы буду делать-->
             <a class="logo" href="index.html">Техномарт</a>
@@ -30,26 +29,25 @@
         </div>
         <div class="ui-header-wrapper">
           <div class="ui-header"> <!--можно реализовать на флексах с justify-content: center; align-content: flex-start;-->
-          <div class="description catalog-fix">
-            <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
-          </div>
-
-          <div class="contacts">
-            <tel class="phone">+7 (812) 555-05-55</tel>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </div>
-
-          <div class="user-profile">
-            <div class="user">
-              <a class="profile"></a>
-              <h3>Равшан Джамшутович</h3>
-              <a class="quit"></a>
+            <div class="description catalog-fix">
+              <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
             </div>
-            <div class="user-links">
-              <a class="order-list" href="#">Мои заказы</a>
-              <a class="user-profile-link" href="#">Личный кабинет</a>
+
+            <div class="contacts">
+              <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
-        </div>
+
+            <div class="user-profile">
+              <div class="user">
+                <a href="#" class="profile"><h3 class="profile-name">Равшан Джамшутович</h3></a>
+                <a  href="#" class="quit"></a>
+              </div>
+              <div class="user-links">
+                <a class="order-list" href="#">Мои заказы</a>
+                <a class="user-profile-link" href="#">Личный кабинет</a>
+              </div>
+          </div>
 
         </div>
 
@@ -89,7 +87,11 @@
                 <form class="filter-catalog" action="index.html" method="post">
                   <fieldset class="price-filter">
                     <legend>Цена:</legend>
-                    <span class="img-container"> <img src="img/filter-range.png" width="180" height="2" alt="filter-range"> </span>
+                    <div class="range-container">
+                      <button class="max range-button" type="button" name="button"></button>
+                      <div class="range"></div>
+                      <button class="min range-button" type="button" name="button"></button>
+                    </div>
                     <div class="input-wrapper">
                       <input type="text" name="min-range" id="min-range" value="0">
                       <span class="dash-after">-</span>
@@ -119,12 +121,11 @@
                   <a class="filter-item price-filter active">По цене</a>
                   <a class="filter-item type-filter" href="#">По типу</a>
                   <a class="filter-item function-filter" href="#">По функционалу</a>
-                  <a class="up-icon active" href="#"></a>
+                  <a class="up-icon" href="#"></a>
                   <a class="down-icon" href="#"></a>
                 </div>
 
                 <div class="good-cards">
-                  <div class="new-good-mark">new</div>
                   <article class="goods">
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
@@ -139,7 +140,6 @@
                   </article>
 
                   <article class="goods">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -153,7 +153,6 @@
                   </article>
 
                   <article class="goods new">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -167,7 +166,6 @@
                   </article>
 
                   <article class="goods new">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -181,7 +179,6 @@
                   </article>
 
                   <article class="goods">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -195,7 +192,6 @@
                   </article>
 
                   <article class="goods new">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -209,7 +205,6 @@
                   </article>
 
                   <article class="goods new">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -223,7 +218,6 @@
                   </article>
 
                   <article class="goods">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -237,7 +231,6 @@
                   </article>
 
                   <article class="goods new">
-                    <div class="new-good-mark">new</div>
                     <div class="item-hover">
                       <a class="buy-button">Купить</a>
                       <a class="choose-button">В закладки</a>
@@ -320,15 +313,15 @@
               Все права защищены</div>
 
             <div class="social-media">
-              <a href="#" class="vk"></a>
-              <a href="#" class="facebook"></a>
-              <a href="#" class="instagram"></a>
+              <a href="#" class="vk empty">ВКонтакте</a>
+              <a href="#" class="facebook empty">Facebook</a>
+              <a href="#" class="instagram empty">Instagram</a>
             </div>
 
             <div class="feedback-contacts">
               <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
 
-              <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/">htmlacademy.ru</a></div>
+              <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></div>
             </div>
           </div>
         </div>
