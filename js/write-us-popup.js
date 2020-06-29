@@ -1,13 +1,24 @@
 let quitButton = document.querySelector('.quit-button');
 let popup = document.querySelector('.write-us-popup');
-let writeUsForm = popup.querySelector('.write-us-form');
+let writeUsLink = document.querySelector('.write-us-link');
 let openPopup = document.querySelector('.write-us');
+let writeUsForm = popup.querySelector('.write-us-form');
 let userName = popup.querySelector('.user-name');
 let userEmail = popup.querySelector('.user-email');
 let userMessage = popup.querySelector('.user-message');
+let submitButton = popup.querySelector('.send-message-button');
 var storageName = '';
 var storageEmail = '';
 var isStorageAccess = true;
+var nameFill = 0;
+var emailFill = 0;
+var messageFill = 0;
+
+writeUsLink.addEventListener('click', function(evt){
+  evt.preventDefault();
+});
+
+openPopup.classList.remove('hidden');
 
 try{
   storageName = localStorage.getItem('name');
@@ -22,6 +33,7 @@ quitButton.addEventListener('click', function(){
 
 openPopup.addEventListener('click', function(){
   popup.classList.remove('hidden');
+
   if(isStorageAccess === true){
     userName.value = localStorage.getItem('name');
     userEmail.value = localStorage.getItem('email');
@@ -29,6 +41,17 @@ openPopup.addEventListener('click', function(){
   } else {
     userName.focus();
   }
+
+  var nameFill = userName.value;
+  var emailFill = userEmail.value;
+  var messageFill = userMessage.value;
+
+  submitButton.addEventListener('click', function(){
+    if (nameFill.length == 0 || emailFill.length == 0 || messageFill.length == 0) {
+      popup.classList.add('form-break-animation');
+      setTimeout(() => {popup.classList.remove('form-break-animation');}, 600);
+    }
+  });
 });
 
 writeUsForm.addEventListener('submit', function(){

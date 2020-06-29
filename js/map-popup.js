@@ -2,9 +2,8 @@ let mapPopup = document.querySelector('.map-popup');
 let map = document.querySelector('.map');
 let quit = mapPopup.querySelector('.quit-button');
 
-mapPopup.classList.add('hidden');
-
-map.addEventListener('click', function(){
+map.addEventListener('click', function(evt){
+  evt.preventDefault();
   mapPopup.classList.remove('hidden');
 });
 

@@ -11,8 +11,6 @@ var continueButtons = goodPopup.querySelectorAll('.continue');
 var buyProductsNumber = 0;
 var markedProductsNumber = 0;
 
-goodPopup.classList.add('hidden');
-
 for (var i = 0; i < buyButtons.length; i++) {
   buyButtons[i].addEventListener('click', function(){
     goodPopup.classList.remove('hidden');
