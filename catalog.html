@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
+      <div class="header-wrapper">
         <div class="top-header-wrapper">
           <div class="top-header">
             <a class="logo" href="index.html">Техномарт</a>
@@ -28,38 +29,39 @@
           </div>
         </div>
         <div class="ui-header-wrapper">
-          <div class="ui-header">
-            <div class="description catalog-fix">
-              <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
+            <div class="ui-header">
+              <div class="description catalog-fix">
+                <p>Интернет-магазин строительных материалов <br> и инструментов для ремонта</p>
+              </div>
+
+              <div class="contacts">
+                <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
+                <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              </div>
+
+              <div class="user-profile">
+                <div class="user">
+                  <a href="#" class="profile"><h3 class="profile-name">Равшан Джамшутович</h3></a>
+                  <a  href="#" class="quit"></a>
+                </div>
+                <div class="user-links">
+                  <a class="order-list" href="#">Мои заказы</a>
+                  <a class="user-profile-link" href="#">Личный кабинет</a>
+                </div>
             </div>
 
-            <div class="contacts">
-              <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            </div>
-
-            <div class="user-profile">
-              <div class="user">
-                <a href="#" class="profile"><h3 class="profile-name">Равшан Джамшутович</h3></a>
-                <a  href="#" class="quit"></a>
-              </div>
-              <div class="user-links">
-                <a class="order-list" href="#">Мои заказы</a>
-                <a class="user-profile-link" href="#">Личный кабинет</a>
-              </div>
           </div>
 
+          <nav class="header-nav">
+            <a href="index.html">Главная</a>
+            <a href="#">Компания</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="#">Новости</a>
+            <a href="#">Спецпредложения</a>
+            <a href="#">Доставка</a>
+            <a href="#">Контакты</a>
+          </nav>
         </div>
-
-        <nav class="header-nav">
-          <a href="index.html">Главная</a>
-          <a href="#">Компания</a>
-          <a href="catalog.html">Каталог</a>
-          <a href="#">Новости</a>
-          <a href="#">Спецпредложения</a>
-          <a href="#">Доставка</a>
-          <a href="#">Контакты</a>
-        </nav>
       </div>
     </header>
 
@@ -111,7 +113,7 @@
                     <input class="custom-radio-button" type="radio" name="charge-type" id="akkum" checked> <label for="akkum">аккумуляторные</label>
                     <input class="custom-radio-button" type="radio" name="charge-type" id="setev"> <label for="setev">сетевые</label>
                   </fieldset>
-                  <button type="submit" name="search-button" value="показать">Показать</button>
+                  <button class="submit-button" type="submit" name="search-button" value="показать">Показать</button>
                 </form>
               </section>
 
@@ -121,8 +123,8 @@
                   <a class="filter-item price-filter active">По цене</a>
                   <a class="filter-item type-filter" href="#">По типу</a>
                   <a class="filter-item function-filter" href="#">По функционалу</a>
-                  <a class="up-icon active" href="#"></a>
-                  <a class="down-icon" href="#"></a>
+                  <a class="up-icon active empty" href="#">up</a>
+                  <a class="down-icon empty" href="#">down</a>
                 </div>
 
                 <div class="good-cards">
@@ -133,7 +135,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 6000</a>
                       <span class="old-price">30500 Р.</span>
                       <span class="new-price">25500 Р.</span>
                     </div>
@@ -146,7 +148,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 6000</a>
                       <span class="old-price">30500 Р.</span>
                       <span class="new-price">25500 Р.</span>
                     </div>
@@ -159,7 +161,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 6000</a>
                       <span class="old-price">30500 Р.</span>
                       <span class="new-price">25500 Р.</span>
                     </div>
@@ -172,7 +174,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 3000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 3000</a>
                       <span class="old-price">22500 Р.</span>
                       <span class="new-price">15500 Р.</span>
                     </div>
@@ -185,7 +187,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 6000</a>
                       <span class="old-price">30500 Р.</span>
                       <span class="new-price">25500 Р.</span>
                     </div>
@@ -198,8 +200,8 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-2000" width="127" height="112"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 2000</b></h4>
-                      <span class="old-price"></span>
+                      <a class="good-title" class="good-title" href="#">Перфоратор BOSCH BFG 2000</a>
+                      <span class="old-price empty">price</span>
                       <span class="new-price">12500 Р.</span>
                     </div>
                   </article>
@@ -211,7 +213,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 3000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 3000</a>
                       <span class="old-price">22500 Р.</span>
                       <span class="new-price">15500 Р.</span>
                     </div>
@@ -224,7 +226,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-6000.jpg" alt="Перфоратор BFG-6000" width="144" height="128"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 6000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 6000</a>
                       <span class="old-price">30500 Р.</span>
                       <span class="new-price">25500 Р.</span>
                     </div>
@@ -237,7 +239,7 @@
                     </div>
                     <div class="good-img-container"> <img src="img/bfg-3000.jpg" alt="Перфоратор BFG-3000" width="127" height="112"> </div>
                     <div class="content">
-                      <h4><b>Перфоратор BOSCH BFG 3000</b></h4>
+                      <a class="good-title" href="#">Перфоратор BOSCH BFG 3000</a>
                       <span class="old-price">22500 Р.</span>
                       <span class="new-price">15500 Р.</span>
                     </div>
@@ -284,8 +286,8 @@
             <div class="top-left-footer-part">
               <a class="logo" href="index.html">Техномарт</a>
 
-              <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-              +7 (812) 555-05-55</p>
+              <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8  <br>
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
             </div>
 
             <nav class="footer-nav">
@@ -319,9 +321,9 @@
             </div>
 
             <div class="feedback-contacts">
-              <div class="feedback">Обратная связь:<br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
+              <div class="feedback">Обратная связь: <br><a href="https://htmlacademy.ru/"> mail@htmlacademy.ru</a></div>
 
-              <div class="designed-by">Разработано — <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></div>
+              <div class="designed-by">Разработано —  <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></div>
             </div>
           </div>
         </div>
