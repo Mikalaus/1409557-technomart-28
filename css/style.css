@@ -727,11 +727,12 @@ background-color: red;
 .goods{
   position: relative;
   width: 220px;
+  box-sizing: border-box;
   height: 318px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--special-greylight);
+  border: 1px solid var(--special-lightgrey);
   overflow: hidden;
   cursor: default;
 }
