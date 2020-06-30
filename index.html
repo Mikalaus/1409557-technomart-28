@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normalize-min.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
@@ -48,13 +48,15 @@
           </div>
 
           <nav class="header-nav">
-            <a href="index.html">Главная</a>
-            <a href="#">Компания</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="#">Новости</a>
-            <a href="#">Спецпредложения</a>
-            <a href="#">Доставка</a>
-            <a href="#">Контакты</a>
+            <div class="line"> <!--Этот div отвечает за резиновость блока, чтобы он выглядил и красиво и функционально, если надо добавить новую строку, надо вставить такой же див с любым наполнением-->
+              <a href="index.html">Главная</a>
+              <a href="#">Компания</a>
+              <a href="catalog.html">Каталог</a>
+              <a href="#">Новости</a>
+              <a href="#">Спецпредложения</a>
+              <a href="#">Доставка</a>
+              <a href="#">Контакты</a>
+            </div>
           </nav>
         </div>
       </div>
@@ -233,10 +235,14 @@
 
           <div class="services-wrapper">
             <section class="services">
-              <h2>Сервисы</h2>
-              <p>Хороший интернет-магазин отличается от плохого не только ценами!
-                Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-
+              <div class="title-part">
+                <h2>Сервисы</h2>
+                <div class="service-title-description">
+                  <p>Хороший интернет-магазин отличается от плохого не только ценами!
+                  Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+                </p>
+                </div>
+              </div>
               <div class="slider">
                 <div class="menu">
                   <input class="hidden service-item deliver" type="radio" id="deliver" name="service" checked>
@@ -403,8 +409,8 @@
     </footer>
     <script src="js/slider-script-min.js"></script>
     <script src="js/slider2-script-min.js"></script>
-    <script src="js/write-us-popup-min.js"></script>
-    <script src="js/map-popup-min.js"></script>
+    <script src="js/write-us-popup.js"></script>
+    <script src="js/map-popup.js"></script>
     <script src="js/good-choose-popup-min.js"></script>
   </body>
 </html>

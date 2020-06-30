@@ -26,7 +26,7 @@
   --service-item-border-top: #405069;
   --social-media: #212A3A;
   --filter-title-background: #F7F3EC;
-  --sumbit-button-border: #E5E5E5;
+  --submit-button-border: #E5E5E5;
   --red-button-hover: #CA2C37;
   --chosen-product-popup: #F1F1F1;
   --chosen-product-popup-continue: #EFEFEF;
@@ -90,9 +90,11 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 542px;
+  min-height: 469px;
   background-color: var(--basic-background);
   margin-top: -5px;
+  overflow: hidden;
+  padding-bottom: 54px;
 }
 
 .about-good-wrapper{
@@ -345,16 +347,14 @@ a{
   text-align: center;
   width: 940px;
   border-bottom: 5px solid #293449;
-  margin-top: 28px;
+  margin-top: 27px;
 }
 
-.header-nav{
+.header-nav .line{
   display: flex;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
-  height: 60px;
-  padding-top: 3px;
 }
 
 .header-nav a{
@@ -362,7 +362,8 @@ a{
   line-height: 24px;
   font-family: "Cuprum", "Arial", sans-serif;
   height: auto;
-  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,16 +376,16 @@ a{
   background-color: var(--basic-grey);
 }
 
-.header-nav a:first-child{
+.header-nav a:nth-of-type(7n-6){
   padding-left: 23px;
 }
 
-.header-nav a:last-child{
-  padding-right: 23px;
+.header-nav a:nth-of-type(7n){
+  padding-right: 19px;
 }
 
 .user-reg{
-  margin-bottom: -13px;
+  margin-bottom: -9px;
 }
 
 .user-reg a{ /* войти и регистрация */
@@ -444,6 +445,7 @@ a{
   gap: 20px;
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: 123px 123px 123px;
+  grid-auto-rows: 123px;
 }
 
 .main-catalog .catalog-item{ /* грид раскладка */
@@ -652,7 +654,7 @@ background-color: red;
 .popular-good .goods-catalog{ /* товар */
   display: flex;
   max-width: 940px;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
@@ -716,6 +718,10 @@ background-color: red;
 
 .goods .item-hover{
   display: none;
+}
+
+.goods-catalog .goods:not(:nth-of-type(4n)){
+  margin-right: 20px;
 }
 
 .goods{
@@ -828,6 +834,8 @@ main .block-header{ /* популярные производители */
   width: 940px;
   margin-top: 57px;
   height: 89px;
+  box-sizing: border-box;
+  padding-top: 3px;
 }
 
 .popular-developers .block-header{
@@ -900,6 +908,7 @@ main .block-header{ /* популярные производители */
 .services{
   background-color: var(--basic-background);
   padding-top: 40px;
+  box-sizing: border-box;
 }
 
 .services h2{
@@ -911,7 +920,7 @@ main .block-header{ /* популярные производители */
   line-height: 30px;
 }
 
-.services>p{
+.services p{
   width: 396px;
   font-family: 'PT Sans', "Arial", sans-serif;
   font-size: 13px;
@@ -922,7 +931,7 @@ main .block-header{ /* популярные производители */
   display: flex;
   position: relative;
   width: 940px;
-  height: 329px;
+  height: 279px;
   margin-top: 18px;
 }
 
@@ -930,7 +939,6 @@ main .block-header{ /* популярные производители */
   position: relative;
   font-family: 'Cuprum', "Arial", sans-serif;
   padding-top: 49px;
-  padding-bottom: 45px;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -961,7 +969,7 @@ main .block-header{ /* популярные производители */
   user-select: none;
   cursor: pointer;
   width: 218px;
-  height: 62px;
+  height: 64px;
   flex-shrink: 0;
   flex-grow: 0;
   color: white;
@@ -969,6 +977,14 @@ main .block-header{ /* популярные производители */
   border-top: 1px solid var(--service-item-border-top);
   border-bottom: 1px solid var(--basic-grey);
   padding-left: 22px;
+}
+
+.service-item:nth-of-type(2)+label{
+  margin-top: -3px;
+}
+
+.service-item:last-of-type+label{
+  margin-top: -5px;
 }
 
 .service-item+label:hover{
@@ -984,15 +1000,14 @@ main .block-header{ /* популярные производители */
 
 .slider .slider-items{
   margin-left: 80px;
-  margin-top: 18px;
+  margin-top: 23px;
   max-width: 619px;
   margin-bottom: 4px;
 }
 
 .slider-items article{
   min-width: 619px;
-  height: 283px;
-  overflow: hidden;
+  height: 233px;
 }
 
 .slider-items h2{
@@ -1014,15 +1029,15 @@ main .block-header{ /* популярные производители */
 }
 
 .slider-items .deliverry{
-  background: url("../img/delivery.png") no-repeat right 50px;
+  background: url("../img/delivery.png") no-repeat right 20px;
 }
 
 .slider-items .guarantee{
-  background: url("../img/guarantee.png") no-repeat right 50px;
+  background: url("../img/guarantee.png") no-repeat right 20px;
 }
 
 .slider-items .credit{
-  background: url("../img/credit.png") no-repeat right 50px;
+  background: url("../img/credit.png") no-repeat right 20px;
 }
 
 .about-us{
@@ -1090,6 +1105,7 @@ main .block-header{ /* популярные производители */
   text-transform: uppercase;
   background-color: var(--basic-red);
   color: #fff;
+  margin-top: 3px;
 }
 
 .contact p{
@@ -1109,7 +1125,7 @@ main .block-header{ /* популярные производители */
 .about-us .write-us{
   display: inline-block;
   vertical-align: baseline;
-  padding-top: 13px;
+  padding-top: 10px;
   padding-bottom: 10px;
   width: 300px;
   text-align: center;
@@ -1122,6 +1138,7 @@ main .block-header{ /* популярные производители */
   outline: none;
   border: none;
   cursor: pointer;
+  margin-top: 6px;
 }
 
 .map{
@@ -1880,7 +1897,7 @@ footer .center-wrapper{
 }
 
 .goods-side .page-search{
-  margin-top: 33px;
+  margin-top: 40px;
   font-family: 'PT Sans', "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1910,7 +1927,7 @@ footer .center-wrapper{
 }
 
 .page-search .next-page{
-  border: 1px solid var(--sumbit-button-border);
+  border: 1px solid var(--submit-button-border);
   padding: 10px 32px;
   cursor: pointer;
 }
