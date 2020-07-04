@@ -1,6 +1,6 @@
 let quitButton = document.querySelector('.quit-button');
 let popup = document.querySelector('.write-us-popup');
-let writeUsLink = document.querySelector('.write-us-link');
+let writeUsLink = document.querySelector('.write-us');
 let openPopup = document.querySelector('.write-us');
 let writeUsForm = popup.querySelector('.write-us-form');
 let userName = popup.querySelector('.user-name');
