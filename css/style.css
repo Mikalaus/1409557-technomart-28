@@ -1146,6 +1146,10 @@ main .block-header{ /* популярные производители */
   margin-top: 6px;
 }
 
+.write-us .write-us-link{
+  color: white;
+}
+
 .map{
   display: block;
 }
