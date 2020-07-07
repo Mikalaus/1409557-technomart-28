@@ -18,8 +18,6 @@ writeUsLink.addEventListener('click', function(evt){
   evt.preventDefault();
 });
 
-openPopup.classList.remove('hidden');
-
 try{
   storageName = localStorage.getItem('name');
   storageEmail = localStorage.getItem('email');
@@ -33,6 +31,7 @@ quitButton.addEventListener('click', function(){
 
 openPopup.addEventListener('click', function(){
   popup.classList.remove('hidden');
+  popup.classList.add('form-break-animation');
 
   if(isStorageAccess === true){
     userName.value = localStorage.getItem('name');
@@ -47,6 +46,7 @@ openPopup.addEventListener('click', function(){
   var messageFill = userMessage.value;
 
   submitButton.addEventListener('click', function(){
+    popup.classList.remove('form-break-animation');
     if (nameFill.length == 0 || emailFill.length == 0 || messageFill.length == 0) {
       popup.classList.add('form-break-animation');
       setTimeout(() => {popup.classList.remove('form-break-animation');}, 600);
