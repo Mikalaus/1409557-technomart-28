@@ -349,13 +349,11 @@ a{
   width: 940px;
   border-bottom: 5px solid #293449;
   margin-top: 27px;
-}
-
-.header-nav .line{
   display: flex;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header-nav a{
@@ -365,6 +363,8 @@ a{
   height: auto;
   padding-top: 16px;
   padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,12 +377,12 @@ a{
   background-color: var(--basic-grey);
 }
 
-.header-nav a:nth-of-type(7n-6){
-  padding-left: 23px;
+.header-nav a:first-of-type{
+  padding-left: 28px;
 }
 
-.header-nav a:nth-of-type(7n){
-  padding-right: 19px;
+.header-nav a:last-of-type{
+  padding-right: 24px;
 }
 
 .user-reg{
