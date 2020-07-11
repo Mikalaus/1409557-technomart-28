@@ -791,11 +791,11 @@ background-color: red;
   background: var(--basic-red);
   text-align: center;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
   color: white;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  margin-left: -7px;
+  margin-left: -9px;
   padding-left: 7px;
 }
 
@@ -841,10 +841,11 @@ main .block-header{ /* популярные производители */
   height: 89px;
   box-sizing: border-box;
   padding-top: 3px;
+  margin-bottom: 22px;
 }
 
 .popular-developers .block-header{
-  margin-top: 71px;
+  margin-top: 69px;
 }
 
 .block-header h2{
@@ -886,7 +887,7 @@ main .block-header{ /* популярные производители */
 
 .block-header .popular-developers-link{
   margin-right: 19px;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .developers .dev{
@@ -1023,7 +1024,7 @@ main .block-header{ /* популярные производители */
   line-height: 30px;
   text-transform: uppercase;
   color: #32425C;
-  margin-top: 30px;
+  margin-top: 27px;
 }
 
 .slider-items p{
@@ -1048,7 +1049,7 @@ main .block-header{ /* популярные производители */
 
 .about-us{
   display: flex;
-  margin-top: 47px;
+  margin-top: 49px;
   margin-bottom: 70px;
 }
 
