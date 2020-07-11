@@ -805,7 +805,7 @@ background-color: red;
   position: absolute;
   top: 0;
   left: 121px;
-  border: 20px solid transparent;
+  border: 19px solid transparent;
 	border-left: 20px solid var(--basic-red);
 }
 
